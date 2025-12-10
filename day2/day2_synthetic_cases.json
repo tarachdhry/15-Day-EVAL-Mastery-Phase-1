@@ -1,0 +1,184 @@
+{
+  "goldens": [
+    {
+      "input": "I forgot my password, what should I do?",
+      "expected_output": "You can reset your password by clicking 'Forgot Password' on the login page. A reset link will be sent to your registered email within 5 minutes.",
+      "metadata": {
+        "difficulty": "easy",
+        "category": "customer_support",
+        "subcategory": "password reset"
+      }
+    },
+    {
+      "input": "How long until my password reset link expires?",
+      "expected_output": "The password reset link expires after 24 hours.",
+      "metadata": {
+        "difficulty": "easy",
+        "category": "customer_support",
+        "subcategory": "password reset"
+      }
+    },
+    {
+      "input": "I am not satisfied with my purchase, can I get a refund?",
+      "expected_output": "Yes, we have a 30-day money-back guarantee on all purchases. Your refund will be processed within 5-7 business days.",
+      "metadata": {
+        "difficulty": "easy",
+        "category": "customer_support",
+        "subcategory": "refund policy"
+      }
+    },
+    {
+      "input": "How long does standard shipping take?",
+      "expected_output": "Standard shipping takes 3-5 business days.",
+      "metadata": {
+        "difficulty": "easy",
+        "category": "customer_support",
+        "subcategory": "shipping"
+      }
+    },
+    {
+      "input": "What is the cost for express shipping?",
+      "expected_output": "Express shipping costs $15.",
+      "metadata": {
+        "difficulty": "easy",
+        "category": "customer_support",
+        "subcategory": "shipping"
+      }
+    },
+    {
+      "input": "How can I delete my account?",
+      "expected_output": "You can delete your account from Settings > Privacy > Delete Account. This will require email confirmation.",
+      "metadata": {
+        "difficulty": "easy",
+        "category": "customer_support",
+        "subcategory": "account deletion"
+      }
+    },
+    {
+      "input": "When are your business hours?",
+      "expected_output": "Our business hours are Monday-Friday from 9 AM - 6 PM EST, and Saturday from 10 AM - 4 PM EST. We are closed on Sunday.",
+      "metadata": {
+        "difficulty": "easy",
+        "category": "customer_support",
+        "subcategory": "business hours"
+      }
+    },
+    {
+      "input": "I requested a refund, when will I get my money back?",
+      "expected_output": "Refunds are processed within 5-7 business days and credited back to your original payment method.",
+      "metadata": {
+        "difficulty": "medium",
+        "category": "customer_support",
+        "subcategory": "refund policy"
+      }
+    },
+    {
+      "input": "I want to delete my account, but what happens to my data?",
+      "expected_output": "After email confirmation, your data will be permanently deleted within 30 days. However, your order history will be retained for legal compliance.",
+      "metadata": {
+        "difficulty": "medium",
+        "category": "customer_support",
+        "subcategory": "account deletion"
+      }
+    },
+    {
+      "input": "I placed an order on Sunday, when will it ship?",
+      "expected_output": "As our business is closed on Sundays, your order will be processed on the next business day, which is Monday.",
+      "metadata": {
+        "difficulty": "medium",
+        "category": "customer_support",
+        "subcategory": "business hours"
+      }
+    },
+    {
+      "input": "I bought an item but I used a wrong email, can I still reset my password?",
+      "expected_output": "The reset link can only be sent to the registered email. Please register or change your account with your correct email.",
+      "metadata": {
+        "difficulty": "hard",
+        "category": "customer_support",
+        "subcategory": "password reset"
+      }
+    },
+    {
+      "input": "I got my refund but the shipping cost was not included, why is that?",
+      "expected_output": "Shipping costs are non-refundable as per our refund policy.",
+      "metadata": {
+        "difficulty": "medium",
+        "category": "customer_support",
+        "subcategory": "refund policy"
+      }
+    },
+    {
+      "input": "I need my order to arrive within 2 days, what should I do?",
+      "expected_output": "You should choose express shipping at checkout. This service costs $15 and takes 1-2 business days.",
+      "metadata": {
+        "difficulty": "medium",
+        "category": "customer_support",
+        "subcategory": "shipping"
+      }
+    },
+    {
+      "input": "I requested to delete my account, but I want to cancel my request, is that possible?",
+      "expected_output": "Once the account deletion process has been initiated and confirmed via email, it cannot be cancelled. Your data will be permanently deleted within 30 days.",
+      "metadata": {
+        "difficulty": "hard",
+        "category": "customer_support",
+        "subcategory": "account deletion"
+      }
+    },
+    {
+      "input": "I want to order a product, but I live outside the US. How much will the shipping cost?",
+      "expected_output": "International shipping costs $25.",
+      "metadata": {
+        "difficulty": "easy",
+        "category": "customer_support",
+        "subcategory": "shipping"
+      }
+    },
+    {
+      "input": "I want to return my purchase which I bought 31 days ago, can I still get a refund?",
+      "expected_output": "No, as per our refund policy, we offer a 30-day money-back guarantee on all purchases. Hence, you cannot get a refund for your purchase.",
+      "metadata": {
+        "difficulty": "medium",
+        "category": "customer_support",
+        "subcategory": "refund policy"
+      }
+    },
+    {
+      "input": "What happens to my order history after I delete my account?",
+      "expected_output": "Your order history will be retained for legal compliance even after your account is deleted.",
+      "metadata": {
+        "difficulty": "medium",
+        "category": "customer_support",
+        "subcategory": "account deletion"
+      }
+    },
+    {
+      "input": "I ordered a product with express shipping on Friday at 7 PM, when will it arrive?",
+      "expected_output": "As our business hours end at 6 PM EST, your order will be processed on the next business day, which is Saturday. With express shipping, your order should arrive by Monday at the latest.",
+      "metadata": {
+        "difficulty": "hard",
+        "category": "customer_support",
+        "subcategory": "business hours"
+      }
+    },
+    {
+      "input": "Do I get free shipping if my order is over $50?",
+      "expected_output": "Yes, we offer free standard shipping on orders over $50.",
+      "metadata": {
+        "difficulty": "easy",
+        "category": "customer_support",
+        "subcategory": "shipping"
+      }
+    },
+    {
+      "input": "What if I don't get the password reset link within 5 minutes?",
+      "expected_output": "Please ensure to check your spam folder. If you still haven't received it, you may want to request again or contact our customer support.",
+      "metadata": {
+        "difficulty": "medium",
+        "category": "customer_support",
+        "subcategory": "password reset"
+      }
+    }
+  ]
+}

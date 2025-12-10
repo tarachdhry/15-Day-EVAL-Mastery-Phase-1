@@ -1,0 +1,139 @@
+{
+  "goldens": [
+    {
+      "input": "What information is required to login using the /auth/login endpoint?",
+      "expected_output": "The /auth/login endpoint requires email and password.",
+      "metadata": {
+        "difficulty": "easy",
+        "category": "api_docs",
+        "subcategory": "Authentication"
+      }
+    },
+    {
+      "input": "What does the /auth/login endpoint return?",
+      "expected_output": "The /auth/login endpoint returns a JWT token which expires in 24 hours.",
+      "metadata": {
+        "difficulty": "easy",
+        "category": "api_docs",
+        "subcategory": "Authentication"
+      }
+    },
+    {
+      "input": "What is the rate limit for login attempts on /auth/login?",
+      "expected_output": "The rate limit for the /auth/login endpoint is 5 attempts per minute.",
+      "metadata": {
+        "difficulty": "easy",
+        "category": "api_docs",
+        "subcategory": "Rate Limiting"
+      }
+    },
+    {
+      "input": "How can I refresh my JWT token?",
+      "expected_output": "You can refresh your JWT token by making a POST request to /auth/refresh with a valid refresh_token.",
+      "metadata": {
+        "difficulty": "medium",
+        "category": "api_docs",
+        "subcategory": "Token Refresh"
+      }
+    },
+    {
+      "input": "What does the /auth/refresh endpoint return?",
+      "expected_output": "The /auth/refresh endpoint returns a new JWT token.",
+      "metadata": {
+        "difficulty": "easy",
+        "category": "api_docs",
+        "subcategory": "Token Refresh"
+      }
+    },
+    {
+      "input": "How long does a refresh token last?",
+      "expected_output": "A refresh token expires in 30 days.",
+      "metadata": {
+        "difficulty": "easy",
+        "category": "api_docs",
+        "subcategory": "Token Refresh"
+      }
+    },
+    {
+      "input": "How do I retrieve user profile data?",
+      "expected_output": "You can retrieve user profile data by making a GET request to /auth/user with an Authorization header containing a valid JWT token.",
+      "metadata": {
+        "difficulty": "medium",
+        "category": "api_docs",
+        "subcategory": "User Profile"
+      }
+    },
+    {
+      "input": "What does the /auth/user endpoint return?",
+      "expected_output": "The /auth/user endpoint returns user profile data.",
+      "metadata": {
+        "difficulty": "easy",
+        "category": "api_docs",
+        "subcategory": "User Profile"
+      }
+    },
+    {
+      "input": "What happens if I make more than 5 login attempts in one minute?",
+      "expected_output": "If you make more than 5 login attempts in one minute, you will hit the rate limit and further attempts will be denied until the next minute.",
+      "metadata": {
+        "difficulty": "medium",
+        "category": "api_docs",
+        "subcategory": "Rate Limiting"
+      }
+    },
+    {
+      "input": "What happens if the refresh token is used after 30 days?",
+      "expected_output": "If the refresh token is used after 30 days, it will be expired and cannot be used to obtain a new JWT token.",
+      "metadata": {
+        "difficulty": "medium",
+        "category": "api_docs",
+        "subcategory": "Token Refresh"
+      }
+    },
+    {
+      "input": "Can I use the JWT token from /auth/login after 24 hours?",
+      "expected_output": "No, the JWT token from /auth/login expires after 24 hours and cannot be used.",
+      "metadata": {
+        "difficulty": "easy",
+        "category": "api_docs",
+        "subcategory": "Authentication"
+      }
+    },
+    {
+      "input": "What happens if I try to access /auth/user without a valid JWT token in the Authorization header?",
+      "expected_output": "If you try to access /auth/user without a valid JWT token in the Authorization header, you will be denied access.",
+      "metadata": {
+        "difficulty": "medium",
+        "category": "api_docs",
+        "subcategory": "User Profile"
+      }
+    },
+    {
+      "input": "What happens if I try to refresh my JWT token with an expired refresh token?",
+      "expected_output": "If you try to refresh your JWT token with an expired refresh token, the request will fail as the refresh token is no longer valid.",
+      "metadata": {
+        "difficulty": "medium",
+        "category": "api_docs",
+        "subcategory": "Token Refresh"
+      }
+    },
+    {
+      "input": "What happens if I hit the rate limit on /auth/login and then immediately try to login again?",
+      "expected_output": "If you hit the rate limit on /auth/login and try to login again immediately, your request will be denied until the rate limit resets after a minute.",
+      "metadata": {
+        "difficulty": "hard",
+        "category": "api_docs",
+        "subcategory": "Rate Limiting"
+      }
+    },
+    {
+      "input": "What happens if I try to refresh my JWT token with a valid refresh token but without a valid JWT token in the Authorization header?",
+      "expected_output": "The /auth/refresh endpoint does not require a JWT token in the Authorization header, only a valid refresh token is needed.",
+      "metadata": {
+        "difficulty": "hard",
+        "category": "api_docs",
+        "subcategory": "Token Refresh"
+      }
+    }
+  ]
+}
