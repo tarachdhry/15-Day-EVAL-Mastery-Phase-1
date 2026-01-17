@@ -1,0 +1,2067 @@
+[
+  {
+    "timestamp": "2025-10-13T16:43:42.016055",
+    "metadata": {
+      "run_number": 1,
+      "test_cases": 10,
+      "metrics": 5
+    },
+    "total_calls": 50,
+    "total_cost": 1.1204699999999999,
+    "avg_cost_per_call": 0.022409399999999996,
+    "calls": [
+      {
+        "timestamp": "2025-10-13T16:43:42.015671",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 484,
+        "output_tokens": 179,
+        "cost": 0.025259999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015720",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 276,
+        "output_tokens": 151,
+        "cost": 0.01734
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015733",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 160,
+        "output_tokens": 101,
+        "cost": 0.01086
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015741",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 520,
+        "output_tokens": 247,
+        "cost": 0.03042
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015748",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 413,
+        "output_tokens": 214,
+        "cost": 0.025229999999999995
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015756",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 529,
+        "output_tokens": 184,
+        "cost": 0.026909999999999996
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015763",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 347,
+        "output_tokens": 175,
+        "cost": 0.020909999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015769",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 227,
+        "output_tokens": 106,
+        "cost": 0.01317
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015775",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 573,
+        "output_tokens": 244,
+        "cost": 0.03183
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015781",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 337,
+        "output_tokens": 144,
+        "cost": 0.01875
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015787",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 462,
+        "output_tokens": 201,
+        "cost": 0.02592
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015793",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 295,
+        "output_tokens": 173,
+        "cost": 0.019229999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015799",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 233,
+        "output_tokens": 94,
+        "cost": 0.01263
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015805",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 520,
+        "output_tokens": 209,
+        "cost": 0.02814
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015811",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 416,
+        "output_tokens": 171,
+        "cost": 0.02274
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015817",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 579,
+        "output_tokens": 212,
+        "cost": 0.030089999999999995
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015823",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 308,
+        "output_tokens": 139,
+        "cost": 0.01758
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015830",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 186,
+        "output_tokens": 82,
+        "cost": 0.010499999999999999
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015836",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 572,
+        "output_tokens": 219,
+        "cost": 0.030299999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015842",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 407,
+        "output_tokens": 208,
+        "cost": 0.024689999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015848",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 498,
+        "output_tokens": 230,
+        "cost": 0.02874
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015853",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 278,
+        "output_tokens": 162,
+        "cost": 0.01806
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015859",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 212,
+        "output_tokens": 111,
+        "cost": 0.01302
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015865",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 596,
+        "output_tokens": 241,
+        "cost": 0.03234
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015871",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 355,
+        "output_tokens": 198,
+        "cost": 0.02253
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015877",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 498,
+        "output_tokens": 221,
+        "cost": 0.0282
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015883",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 297,
+        "output_tokens": 179,
+        "cost": 0.01965
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015889",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 238,
+        "output_tokens": 102,
+        "cost": 0.01326
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015895",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 673,
+        "output_tokens": 250,
+        "cost": 0.03519
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015900",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 459,
+        "output_tokens": 186,
+        "cost": 0.02493
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015907",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 487,
+        "output_tokens": 218,
+        "cost": 0.02769
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015912",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 283,
+        "output_tokens": 137,
+        "cost": 0.01671
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015918",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 182,
+        "output_tokens": 87,
+        "cost": 0.010679999999999999
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015931",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 512,
+        "output_tokens": 238,
+        "cost": 0.02964
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015937",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 435,
+        "output_tokens": 194,
+        "cost": 0.024689999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015947",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 494,
+        "output_tokens": 205,
+        "cost": 0.02712
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015953",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 357,
+        "output_tokens": 166,
+        "cost": 0.02067
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015959",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 188,
+        "output_tokens": 90,
+        "cost": 0.01104
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015969",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 678,
+        "output_tokens": 243,
+        "cost": 0.03492
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015975",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 342,
+        "output_tokens": 150,
+        "cost": 0.01926
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015981",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 460,
+        "output_tokens": 188,
+        "cost": 0.025079999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015987",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 310,
+        "output_tokens": 150,
+        "cost": 0.018299999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015993",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 231,
+        "output_tokens": 103,
+        "cost": 0.01311
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.015999",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 510,
+        "output_tokens": 272,
+        "cost": 0.03162
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.016006",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 448,
+        "output_tokens": 146,
+        "cost": 0.022199999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.016012",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 573,
+        "output_tokens": 176,
+        "cost": 0.027749999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.016017",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 255,
+        "output_tokens": 148,
+        "cost": 0.01653
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.016023",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 199,
+        "output_tokens": 92,
+        "cost": 0.01149
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.016029",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 642,
+        "output_tokens": 207,
+        "cost": 0.03168
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.016035",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 361,
+        "output_tokens": 184,
+        "cost": 0.02187
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-10-13T16:43:42.018027",
+    "metadata": {
+      "run_number": 2,
+      "test_cases": 10,
+      "metrics": 5
+    },
+    "total_calls": 50,
+    "total_cost": 1.12092,
+    "avg_cost_per_call": 0.022418399999999998,
+    "calls": [
+      {
+        "timestamp": "2025-10-13T16:43:42.017685",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 504,
+        "output_tokens": 172,
+        "cost": 0.025439999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017701",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 253,
+        "output_tokens": 140,
+        "cost": 0.01599
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017708",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 220,
+        "output_tokens": 107,
+        "cost": 0.01302
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017720",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 619,
+        "output_tokens": 252,
+        "cost": 0.03369
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017726",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 325,
+        "output_tokens": 208,
+        "cost": 0.02223
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017732",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 547,
+        "output_tokens": 188,
+        "cost": 0.02769
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017736",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 256,
+        "output_tokens": 135,
+        "cost": 0.01578
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017742",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 214,
+        "output_tokens": 110,
+        "cost": 0.01302
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017747",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 557,
+        "output_tokens": 219,
+        "cost": 0.02985
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017752",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 347,
+        "output_tokens": 204,
+        "cost": 0.022649999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017757",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 586,
+        "output_tokens": 209,
+        "cost": 0.030119999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017762",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 317,
+        "output_tokens": 139,
+        "cost": 0.017849999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017766",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 206,
+        "output_tokens": 89,
+        "cost": 0.011519999999999999
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017771",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 656,
+        "output_tokens": 228,
+        "cost": 0.03336
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017824",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 438,
+        "output_tokens": 186,
+        "cost": 0.0243
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017833",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 442,
+        "output_tokens": 189,
+        "cost": 0.024599999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017838",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 351,
+        "output_tokens": 154,
+        "cost": 0.01977
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017844",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 162,
+        "output_tokens": 108,
+        "cost": 0.01134
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017850",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 679,
+        "output_tokens": 235,
+        "cost": 0.03447
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017855",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 328,
+        "output_tokens": 192,
+        "cost": 0.021359999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017861",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 466,
+        "output_tokens": 207,
+        "cost": 0.0264
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017865",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 291,
+        "output_tokens": 147,
+        "cost": 0.01755
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017881",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 197,
+        "output_tokens": 118,
+        "cost": 0.01299
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017886",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 536,
+        "output_tokens": 229,
+        "cost": 0.02982
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017891",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 437,
+        "output_tokens": 175,
+        "cost": 0.02361
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017896",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 469,
+        "output_tokens": 181,
+        "cost": 0.02493
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017901",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 344,
+        "output_tokens": 160,
+        "cost": 0.01992
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017906",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 169,
+        "output_tokens": 99,
+        "cost": 0.011009999999999999
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017911",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 626,
+        "output_tokens": 226,
+        "cost": 0.032339999999999994
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017915",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 450,
+        "output_tokens": 193,
+        "cost": 0.025079999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017920",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 575,
+        "output_tokens": 173,
+        "cost": 0.027629999999999995
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017925",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 293,
+        "output_tokens": 150,
+        "cost": 0.01779
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017930",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 180,
+        "output_tokens": 90,
+        "cost": 0.010799999999999999
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017935",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 642,
+        "output_tokens": 224,
+        "cost": 0.0327
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017939",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 418,
+        "output_tokens": 187,
+        "cost": 0.023759999999999996
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017944",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 494,
+        "output_tokens": 161,
+        "cost": 0.024480000000000002
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017949",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 328,
+        "output_tokens": 150,
+        "cost": 0.01884
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017953",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 204,
+        "output_tokens": 112,
+        "cost": 0.01284
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017958",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 616,
+        "output_tokens": 261,
+        "cost": 0.034140000000000004
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017963",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 334,
+        "output_tokens": 201,
+        "cost": 0.02208
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017968",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 540,
+        "output_tokens": 162,
+        "cost": 0.02592
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017973",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 296,
+        "output_tokens": 175,
+        "cost": 0.019379999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017978",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 182,
+        "output_tokens": 111,
+        "cost": 0.012119999999999999
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017983",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 539,
+        "output_tokens": 200,
+        "cost": 0.02817
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017987",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 446,
+        "output_tokens": 191,
+        "cost": 0.02484
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017992",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 519,
+        "output_tokens": 219,
+        "cost": 0.02871
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.017997",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 350,
+        "output_tokens": 175,
+        "cost": 0.020999999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.018001",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 174,
+        "output_tokens": 117,
+        "cost": 0.012240000000000001
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.018006",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 514,
+        "output_tokens": 224,
+        "cost": 0.02886
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.018011",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 358,
+        "output_tokens": 203,
+        "cost": 0.02292
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-10-13T16:43:42.021406",
+    "metadata": {
+      "run_number": 3,
+      "test_cases": 10,
+      "metrics": 5
+    },
+    "total_calls": 50,
+    "total_cost": 1.1175,
+    "avg_cost_per_call": 0.02235,
+    "calls": [
+      {
+        "timestamp": "2025-10-13T16:43:42.021011",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 570,
+        "output_tokens": 191,
+        "cost": 0.028559999999999995
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021040",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 272,
+        "output_tokens": 149,
+        "cost": 0.0171
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021048",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 227,
+        "output_tokens": 99,
+        "cost": 0.012750000000000001
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021055",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 579,
+        "output_tokens": 224,
+        "cost": 0.030809999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021085",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 384,
+        "output_tokens": 187,
+        "cost": 0.022739999999999996
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021098",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 561,
+        "output_tokens": 170,
+        "cost": 0.027030000000000002
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021106",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 240,
+        "output_tokens": 122,
+        "cost": 0.014519999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021113",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 208,
+        "output_tokens": 82,
+        "cost": 0.01116
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021119",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 548,
+        "output_tokens": 298,
+        "cost": 0.03432
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021125",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 426,
+        "output_tokens": 164,
+        "cost": 0.02262
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021132",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 416,
+        "output_tokens": 196,
+        "cost": 0.024239999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021138",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 335,
+        "output_tokens": 126,
+        "cost": 0.01761
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021144",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 166,
+        "output_tokens": 109,
+        "cost": 0.011519999999999999
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021150",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 649,
+        "output_tokens": 286,
+        "cost": 0.036629999999999996
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021157",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 389,
+        "output_tokens": 182,
+        "cost": 0.02259
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021164",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 554,
+        "output_tokens": 194,
+        "cost": 0.02826
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021170",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 252,
+        "output_tokens": 124,
+        "cost": 0.015
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021176",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 201,
+        "output_tokens": 81,
+        "cost": 0.01089
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021183",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 624,
+        "output_tokens": 268,
+        "cost": 0.0348
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021189",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 409,
+        "output_tokens": 196,
+        "cost": 0.024029999999999996
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021197",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 439,
+        "output_tokens": 231,
+        "cost": 0.02703
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021203",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 341,
+        "output_tokens": 124,
+        "cost": 0.01767
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021210",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 190,
+        "output_tokens": 88,
+        "cost": 0.01098
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021217",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 584,
+        "output_tokens": 210,
+        "cost": 0.030119999999999994
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021223",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 378,
+        "output_tokens": 212,
+        "cost": 0.024059999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021230",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 596,
+        "output_tokens": 215,
+        "cost": 0.030780000000000002
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021237",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 285,
+        "output_tokens": 120,
+        "cost": 0.01575
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021243",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 160,
+        "output_tokens": 112,
+        "cost": 0.011519999999999999
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021250",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 579,
+        "output_tokens": 282,
+        "cost": 0.034289999999999994
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021257",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 465,
+        "output_tokens": 158,
+        "cost": 0.02343
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021264",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 412,
+        "output_tokens": 166,
+        "cost": 0.02232
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021270",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 307,
+        "output_tokens": 179,
+        "cost": 0.01995
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021277",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 171,
+        "output_tokens": 91,
+        "cost": 0.010589999999999999
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021284",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 594,
+        "output_tokens": 201,
+        "cost": 0.029879999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021290",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 406,
+        "output_tokens": 149,
+        "cost": 0.02112
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021297",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 556,
+        "output_tokens": 177,
+        "cost": 0.027299999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021302",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 326,
+        "output_tokens": 140,
+        "cost": 0.01818
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021306",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 236,
+        "output_tokens": 81,
+        "cost": 0.01194
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021309",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 488,
+        "output_tokens": 271,
+        "cost": 0.030899999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021314",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 427,
+        "output_tokens": 166,
+        "cost": 0.02277
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021359",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 492,
+        "output_tokens": 215,
+        "cost": 0.027659999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021365",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 329,
+        "output_tokens": 130,
+        "cost": 0.017669999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021369",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 187,
+        "output_tokens": 99,
+        "cost": 0.01155
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021373",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 680,
+        "output_tokens": 203,
+        "cost": 0.03258
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021377",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 344,
+        "output_tokens": 213,
+        "cost": 0.0231
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021380",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 593,
+        "output_tokens": 213,
+        "cost": 0.030569999999999996
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021384",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 358,
+        "output_tokens": 146,
+        "cost": 0.019499999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021387",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 200,
+        "output_tokens": 85,
+        "cost": 0.0111
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021391",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 642,
+        "output_tokens": 239,
+        "cost": 0.0336
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.021394",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 449,
+        "output_tokens": 149,
+        "cost": 0.02241
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-10-13T16:43:42.025011",
+    "metadata": {
+      "run_number": 4,
+      "test_cases": 10,
+      "metrics": 5
+    },
+    "total_calls": 50,
+    "total_cost": 1.09398,
+    "avg_cost_per_call": 0.0218796,
+    "calls": [
+      {
+        "timestamp": "2025-10-13T16:43:42.024770",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 406,
+        "output_tokens": 174,
+        "cost": 0.02262
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024787",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 350,
+        "output_tokens": 165,
+        "cost": 0.0204
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024792",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 192,
+        "output_tokens": 96,
+        "cost": 0.011519999999999999
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024796",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 528,
+        "output_tokens": 293,
+        "cost": 0.03342
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024800",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 405,
+        "output_tokens": 195,
+        "cost": 0.023850000000000003
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024804",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 502,
+        "output_tokens": 228,
+        "cost": 0.028739999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024809",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 261,
+        "output_tokens": 140,
+        "cost": 0.01623
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024813",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 204,
+        "output_tokens": 93,
+        "cost": 0.011699999999999999
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024817",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 563,
+        "output_tokens": 298,
+        "cost": 0.034769999999999995
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024820",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 369,
+        "output_tokens": 159,
+        "cost": 0.02061
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024824",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 530,
+        "output_tokens": 198,
+        "cost": 0.02778
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024828",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 350,
+        "output_tokens": 122,
+        "cost": 0.01782
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024834",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 161,
+        "output_tokens": 89,
+        "cost": 0.010169999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024840",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 585,
+        "output_tokens": 204,
+        "cost": 0.029789999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024848",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 371,
+        "output_tokens": 181,
+        "cost": 0.02199
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024851",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 521,
+        "output_tokens": 224,
+        "cost": 0.029070000000000002
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024855",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 295,
+        "output_tokens": 142,
+        "cost": 0.017369999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024858",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 180,
+        "output_tokens": 111,
+        "cost": 0.01206
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024863",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 676,
+        "output_tokens": 245,
+        "cost": 0.03498
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024869",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 473,
+        "output_tokens": 211,
+        "cost": 0.02685
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024876",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 562,
+        "output_tokens": 172,
+        "cost": 0.02718
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024882",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 293,
+        "output_tokens": 121,
+        "cost": 0.01605
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024888",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 189,
+        "output_tokens": 94,
+        "cost": 0.01131
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024892",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 566,
+        "output_tokens": 257,
+        "cost": 0.0324
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024895",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 442,
+        "output_tokens": 173,
+        "cost": 0.023639999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024899",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 408,
+        "output_tokens": 202,
+        "cost": 0.02436
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024902",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 314,
+        "output_tokens": 159,
+        "cost": 0.018959999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024906",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 206,
+        "output_tokens": 104,
+        "cost": 0.01242
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024909",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 529,
+        "output_tokens": 228,
+        "cost": 0.02955
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024912",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 349,
+        "output_tokens": 196,
+        "cost": 0.02223
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024916",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 406,
+        "output_tokens": 181,
+        "cost": 0.023039999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024919",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 312,
+        "output_tokens": 124,
+        "cost": 0.0168
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024923",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 180,
+        "output_tokens": 83,
+        "cost": 0.01038
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024926",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 711,
+        "output_tokens": 225,
+        "cost": 0.03483
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024929",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 405,
+        "output_tokens": 174,
+        "cost": 0.02259
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024933",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 435,
+        "output_tokens": 165,
+        "cost": 0.022949999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024936",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 266,
+        "output_tokens": 162,
+        "cost": 0.0177
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024940",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 168,
+        "output_tokens": 85,
+        "cost": 0.01014
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024943",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 507,
+        "output_tokens": 210,
+        "cost": 0.027809999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024946",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 364,
+        "output_tokens": 189,
+        "cost": 0.02226
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024950",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 538,
+        "output_tokens": 174,
+        "cost": 0.02658
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024954",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 305,
+        "output_tokens": 153,
+        "cost": 0.01833
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024960",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 236,
+        "output_tokens": 95,
+        "cost": 0.01278
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024967",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 487,
+        "output_tokens": 222,
+        "cost": 0.02793
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024973",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 346,
+        "output_tokens": 187,
+        "cost": 0.021599999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024977",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 405,
+        "output_tokens": 166,
+        "cost": 0.02211
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024981",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 333,
+        "output_tokens": 160,
+        "cost": 0.01959
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024984",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 211,
+        "output_tokens": 115,
+        "cost": 0.013229999999999999
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024987",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 685,
+        "output_tokens": 203,
+        "cost": 0.03273
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.024991",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 388,
+        "output_tokens": 152,
+        "cost": 0.02076
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-10-13T16:43:42.030615",
+    "metadata": {
+      "run_number": 5,
+      "test_cases": 10,
+      "metrics": 5
+    },
+    "total_calls": 50,
+    "total_cost": 1.12938,
+    "avg_cost_per_call": 0.0225876,
+    "calls": [
+      {
+        "timestamp": "2025-10-13T16:43:42.030368",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 525,
+        "output_tokens": 185,
+        "cost": 0.02685
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030386",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 245,
+        "output_tokens": 176,
+        "cost": 0.01791
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030391",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 200,
+        "output_tokens": 103,
+        "cost": 0.01218
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030395",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 652,
+        "output_tokens": 294,
+        "cost": 0.0372
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030399",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 466,
+        "output_tokens": 163,
+        "cost": 0.023760000000000003
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030403",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 545,
+        "output_tokens": 202,
+        "cost": 0.028470000000000002
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030407",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 270,
+        "output_tokens": 177,
+        "cost": 0.01872
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030411",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 215,
+        "output_tokens": 112,
+        "cost": 0.013170000000000001
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030414",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 513,
+        "output_tokens": 209,
+        "cost": 0.027929999999999996
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030418",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 377,
+        "output_tokens": 169,
+        "cost": 0.021449999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030422",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 561,
+        "output_tokens": 239,
+        "cost": 0.03117
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030456",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 242,
+        "output_tokens": 141,
+        "cost": 0.015719999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030465",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 194,
+        "output_tokens": 92,
+        "cost": 0.01134
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030470",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 553,
+        "output_tokens": 286,
+        "cost": 0.03375
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030474",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 421,
+        "output_tokens": 198,
+        "cost": 0.024509999999999997
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030478",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 518,
+        "output_tokens": 226,
+        "cost": 0.0291
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030482",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 244,
+        "output_tokens": 138,
+        "cost": 0.0156
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030486",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 172,
+        "output_tokens": 94,
+        "cost": 0.0108
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030489",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 624,
+        "output_tokens": 274,
+        "cost": 0.03516
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030493",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 427,
+        "output_tokens": 162,
+        "cost": 0.022529999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030496",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 432,
+        "output_tokens": 233,
+        "cost": 0.02694
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030500",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 333,
+        "output_tokens": 140,
+        "cost": 0.018390000000000004
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030503",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 161,
+        "output_tokens": 93,
+        "cost": 0.010409999999999999
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030507",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 519,
+        "output_tokens": 264,
+        "cost": 0.03141
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030510",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 328,
+        "output_tokens": 215,
+        "cost": 0.02274
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030514",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 470,
+        "output_tokens": 190,
+        "cost": 0.0255
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030517",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 336,
+        "output_tokens": 156,
+        "cost": 0.01944
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030520",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 173,
+        "output_tokens": 95,
+        "cost": 0.01089
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030524",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 610,
+        "output_tokens": 231,
+        "cost": 0.03216
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030527",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 457,
+        "output_tokens": 187,
+        "cost": 0.02493
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030531",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 500,
+        "output_tokens": 231,
+        "cost": 0.02886
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030534",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 255,
+        "output_tokens": 139,
+        "cost": 0.01599
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030537",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 168,
+        "output_tokens": 116,
+        "cost": 0.012
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030541",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 508,
+        "output_tokens": 202,
+        "cost": 0.027360000000000002
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030544",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 441,
+        "output_tokens": 210,
+        "cost": 0.02583
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030548",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 514,
+        "output_tokens": 218,
+        "cost": 0.028499999999999998
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030551",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 346,
+        "output_tokens": 134,
+        "cost": 0.01842
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030554",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 164,
+        "output_tokens": 109,
+        "cost": 0.01146
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030558",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 567,
+        "output_tokens": 274,
+        "cost": 0.033449999999999994
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030561",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 397,
+        "output_tokens": 156,
+        "cost": 0.02127
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030564",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 561,
+        "output_tokens": 206,
+        "cost": 0.02919
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030568",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 310,
+        "output_tokens": 133,
+        "cost": 0.01728
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030571",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 199,
+        "output_tokens": 100,
+        "cost": 0.011970000000000001
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030575",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 508,
+        "output_tokens": 265,
+        "cost": 0.03114
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030578",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 462,
+        "output_tokens": 155,
+        "cost": 0.02316
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030590",
+        "model": "gpt-4",
+        "metric": "Accuracy",
+        "input_tokens": 493,
+        "output_tokens": 212,
+        "cost": 0.02751
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030593",
+        "model": "gpt-4",
+        "metric": "Empathy",
+        "input_tokens": 330,
+        "output_tokens": 127,
+        "cost": 0.01752
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030597",
+        "model": "gpt-4",
+        "metric": "Clarity",
+        "input_tokens": 227,
+        "output_tokens": 114,
+        "cost": 0.013649999999999999
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030601",
+        "model": "gpt-4",
+        "metric": "Hallucination",
+        "input_tokens": 564,
+        "output_tokens": 265,
+        "cost": 0.03282
+      },
+      {
+        "timestamp": "2025-10-13T16:43:42.030604",
+        "model": "gpt-4",
+        "metric": "Citation",
+        "input_tokens": 411,
+        "output_tokens": 159,
+        "cost": 0.02187
+      }
+    ]
+  }
+]

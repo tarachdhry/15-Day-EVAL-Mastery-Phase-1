@@ -1,0 +1,602 @@
+[
+  {
+    "timestamp": "2025-10-13T16:20:41.005181",
+    "user_input": "How do I track my order?",
+    "llm_response": "I'd be happy to help you track your order! Please provide your order number and I'll look it up right away.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.006246",
+    "user_input": "What's your return policy?",
+    "llm_response": "We offer a 30-day money-back guarantee on all purchases. Returns are easy - just visit our returns portal and follow the steps.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.008356",
+    "user_input": "My package is late!",
+    "llm_response": "Check tracking.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.010307",
+    "user_input": "I'm very frustrated",
+    "llm_response": "I don't know what to tell you.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.011938",
+    "user_input": "Help!!!",
+    "llm_response": "Error processing request.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.013796",
+    "user_input": "REFUND MY MONEY NOW!!!",
+    "llm_response": "Please calm down and contact support.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.015770",
+    "user_input": "",
+    "llm_response": "I didn't receive any input.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.017906",
+    "user_input": "Can you help me with my order #12345 that I placed on October 1st but it still hasn't arrived and I'm getting worried because it was supposed to be a gift and now the event is tomorrow and I don't know what to do?",
+    "llm_response": "Yes.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.019821",
+    "user_input": "How do I reset my password?",
+    "llm_response": "To reset your password, click 'Forgot Password' on the login page and follow the email instructions.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.021839",
+    "user_input": "Do you ship internationally?",
+    "llm_response": "Yes! We ship to over 100 countries. Shipping costs vary by location.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.023046",
+    "user_input": "Question 0 about product features",
+    "llm_response": "Here's a detailed answer about product features: 0",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.024745",
+    "user_input": "Question 1 about product features",
+    "llm_response": "Here's a detailed answer about product features: 1",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.026743",
+    "user_input": "Question 2 about product features",
+    "llm_response": "Here's a detailed answer about product features: 2",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.028649",
+    "user_input": "Question 3 about product features",
+    "llm_response": "Here's a detailed answer about product features: 3",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.030728",
+    "user_input": "Question 4 about product features",
+    "llm_response": "Here's a detailed answer about product features: 4",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.032769",
+    "user_input": "Question 5 about product features",
+    "llm_response": "Here's a detailed answer about product features: 5",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.034834",
+    "user_input": "Question 6 about product features",
+    "llm_response": "Here's a detailed answer about product features: 6",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.036886",
+    "user_input": "Question 7 about product features",
+    "llm_response": "Here's a detailed answer about product features: 7",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.039028",
+    "user_input": "Question 8 about product features",
+    "llm_response": "Here's a detailed answer about product features: 8",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.041086",
+    "user_input": "Question 9 about product features",
+    "llm_response": "Here's a detailed answer about product features: 9",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.043280",
+    "user_input": "Question 10 about product features",
+    "llm_response": "Here's a detailed answer about product features: 10",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.045110",
+    "user_input": "Question 11 about product features",
+    "llm_response": "Here's a detailed answer about product features: 11",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.047120",
+    "user_input": "Question 12 about product features",
+    "llm_response": "Here's a detailed answer about product features: 12",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.049156",
+    "user_input": "Question 13 about product features",
+    "llm_response": "Here's a detailed answer about product features: 13",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.051179",
+    "user_input": "Question 14 about product features",
+    "llm_response": "Here's a detailed answer about product features: 14",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.052914",
+    "user_input": "Question 15 about product features",
+    "llm_response": "Here's a detailed answer about product features: 15",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.055041",
+    "user_input": "Question 16 about product features",
+    "llm_response": "Here's a detailed answer about product features: 16",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.057683",
+    "user_input": "Question 17 about product features",
+    "llm_response": "Here's a detailed answer about product features: 17",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.059088",
+    "user_input": "Question 18 about product features",
+    "llm_response": "Here's a detailed answer about product features: 18",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.061142",
+    "user_input": "Question 19 about product features",
+    "llm_response": "Here's a detailed answer about product features: 19",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.063084",
+    "user_input": "Question 20 about product features",
+    "llm_response": "Here's a detailed answer about product features: 20",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.065173",
+    "user_input": "Question 21 about product features",
+    "llm_response": "Here's a detailed answer about product features: 21",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.067382",
+    "user_input": "Question 22 about product features",
+    "llm_response": "Here's a detailed answer about product features: 22",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.069496",
+    "user_input": "Question 23 about product features",
+    "llm_response": "Here's a detailed answer about product features: 23",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.071541",
+    "user_input": "Question 24 about product features",
+    "llm_response": "Here's a detailed answer about product features: 24",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.073849",
+    "user_input": "Question 25 about product features",
+    "llm_response": "Here's a detailed answer about product features: 25",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.076298",
+    "user_input": "Question 26 about product features",
+    "llm_response": "Here's a detailed answer about product features: 26",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.078319",
+    "user_input": "Question 27 about product features",
+    "llm_response": "Here's a detailed answer about product features: 27",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.080183",
+    "user_input": "Question 28 about product features",
+    "llm_response": "Here's a detailed answer about product features: 28",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.082148",
+    "user_input": "Question 29 about product features",
+    "llm_response": "Here's a detailed answer about product features: 29",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.084394",
+    "user_input": "Question 30 about product features",
+    "llm_response": "Here's a detailed answer about product features: 30",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.086328",
+    "user_input": "Question 31 about product features",
+    "llm_response": "Here's a detailed answer about product features: 31",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.088419",
+    "user_input": "Question 32 about product features",
+    "llm_response": "Here's a detailed answer about product features: 32",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.090449",
+    "user_input": "Question 33 about product features",
+    "llm_response": "Here's a detailed answer about product features: 33",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.092427",
+    "user_input": "Question 34 about product features",
+    "llm_response": "Here's a detailed answer about product features: 34",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.094581",
+    "user_input": "Question 35 about product features",
+    "llm_response": "Here's a detailed answer about product features: 35",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.096883",
+    "user_input": "Question 36 about product features",
+    "llm_response": "Here's a detailed answer about product features: 36",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.099258",
+    "user_input": "Question 37 about product features",
+    "llm_response": "Here's a detailed answer about product features: 37",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.101382",
+    "user_input": "Question 38 about product features",
+    "llm_response": "Here's a detailed answer about product features: 38",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:20:41.103192",
+    "user_input": "Question 39 about product features",
+    "llm_response": "Here's a detailed answer about product features: 39",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.268042",
+    "user_input": "How do I track my order?",
+    "llm_response": "I'd be happy to help you track your order! Please provide your order number and I'll look it up right away.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.271946",
+    "user_input": "What's your return policy?",
+    "llm_response": "We offer a 30-day money-back guarantee on all purchases. Returns are easy - just visit our returns portal and follow the steps.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.275147",
+    "user_input": "My package is late!",
+    "llm_response": "Check tracking.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.278332",
+    "user_input": "I'm very frustrated",
+    "llm_response": "I don't know what to tell you.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.281481",
+    "user_input": "Help!!!",
+    "llm_response": "Error processing request.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.284541",
+    "user_input": "REFUND MY MONEY NOW!!!",
+    "llm_response": "Please calm down and contact support.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.287465",
+    "user_input": "",
+    "llm_response": "I didn't receive any input.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.290380",
+    "user_input": "Can you help me with my order #12345 that I placed on October 1st but it still hasn't arrived and I'm getting worried because it was supposed to be a gift and now the event is tomorrow and I don't know what to do?",
+    "llm_response": "Yes.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.293696",
+    "user_input": "How do I reset my password?",
+    "llm_response": "To reset your password, click 'Forgot Password' on the login page and follow the email instructions.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.296857",
+    "user_input": "Do you ship internationally?",
+    "llm_response": "Yes! We ship to over 100 countries. Shipping costs vary by location.",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.300228",
+    "user_input": "Question 0 about product features",
+    "llm_response": "Here's a detailed answer about product features: 0",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.303608",
+    "user_input": "Question 1 about product features",
+    "llm_response": "Here's a detailed answer about product features: 1",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.306787",
+    "user_input": "Question 2 about product features",
+    "llm_response": "Here's a detailed answer about product features: 2",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.309661",
+    "user_input": "Question 3 about product features",
+    "llm_response": "Here's a detailed answer about product features: 3",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.312551",
+    "user_input": "Question 4 about product features",
+    "llm_response": "Here's a detailed answer about product features: 4",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.315879",
+    "user_input": "Question 5 about product features",
+    "llm_response": "Here's a detailed answer about product features: 5",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.318225",
+    "user_input": "Question 6 about product features",
+    "llm_response": "Here's a detailed answer about product features: 6",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.320892",
+    "user_input": "Question 7 about product features",
+    "llm_response": "Here's a detailed answer about product features: 7",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.323563",
+    "user_input": "Question 8 about product features",
+    "llm_response": "Here's a detailed answer about product features: 8",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.340545",
+    "user_input": "Question 9 about product features",
+    "llm_response": "Here's a detailed answer about product features: 9",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.349531",
+    "user_input": "Question 10 about product features",
+    "llm_response": "Here's a detailed answer about product features: 10",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.353815",
+    "user_input": "Question 11 about product features",
+    "llm_response": "Here's a detailed answer about product features: 11",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.358325",
+    "user_input": "Question 12 about product features",
+    "llm_response": "Here's a detailed answer about product features: 12",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.363759",
+    "user_input": "Question 13 about product features",
+    "llm_response": "Here's a detailed answer about product features: 13",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.367229",
+    "user_input": "Question 14 about product features",
+    "llm_response": "Here's a detailed answer about product features: 14",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.371295",
+    "user_input": "Question 15 about product features",
+    "llm_response": "Here's a detailed answer about product features: 15",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.372828",
+    "user_input": "Question 16 about product features",
+    "llm_response": "Here's a detailed answer about product features: 16",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.375816",
+    "user_input": "Question 17 about product features",
+    "llm_response": "Here's a detailed answer about product features: 17",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.378468",
+    "user_input": "Question 18 about product features",
+    "llm_response": "Here's a detailed answer about product features: 18",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.380790",
+    "user_input": "Question 19 about product features",
+    "llm_response": "Here's a detailed answer about product features: 19",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.383429",
+    "user_input": "Question 20 about product features",
+    "llm_response": "Here's a detailed answer about product features: 20",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.385946",
+    "user_input": "Question 21 about product features",
+    "llm_response": "Here's a detailed answer about product features: 21",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.388438",
+    "user_input": "Question 22 about product features",
+    "llm_response": "Here's a detailed answer about product features: 22",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.390911",
+    "user_input": "Question 23 about product features",
+    "llm_response": "Here's a detailed answer about product features: 23",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.393497",
+    "user_input": "Question 24 about product features",
+    "llm_response": "Here's a detailed answer about product features: 24",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.396196",
+    "user_input": "Question 25 about product features",
+    "llm_response": "Here's a detailed answer about product features: 25",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.398654",
+    "user_input": "Question 26 about product features",
+    "llm_response": "Here's a detailed answer about product features: 26",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.400944",
+    "user_input": "Question 27 about product features",
+    "llm_response": "Here's a detailed answer about product features: 27",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.403681",
+    "user_input": "Question 28 about product features",
+    "llm_response": "Here's a detailed answer about product features: 28",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.406903",
+    "user_input": "Question 29 about product features",
+    "llm_response": "Here's a detailed answer about product features: 29",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.409698",
+    "user_input": "Question 30 about product features",
+    "llm_response": "Here's a detailed answer about product features: 30",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.412395",
+    "user_input": "Question 31 about product features",
+    "llm_response": "Here's a detailed answer about product features: 31",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.414968",
+    "user_input": "Question 32 about product features",
+    "llm_response": "Here's a detailed answer about product features: 32",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.418139",
+    "user_input": "Question 33 about product features",
+    "llm_response": "Here's a detailed answer about product features: 33",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.420855",
+    "user_input": "Question 34 about product features",
+    "llm_response": "Here's a detailed answer about product features: 34",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.424024",
+    "user_input": "Question 35 about product features",
+    "llm_response": "Here's a detailed answer about product features: 35",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.426810",
+    "user_input": "Question 36 about product features",
+    "llm_response": "Here's a detailed answer about product features: 36",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.429677",
+    "user_input": "Question 37 about product features",
+    "llm_response": "Here's a detailed answer about product features: 37",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.433241",
+    "user_input": "Question 38 about product features",
+    "llm_response": "Here's a detailed answer about product features: 38",
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-10-13T16:31:43.436682",
+    "user_input": "Question 39 about product features",
+    "llm_response": "Here's a detailed answer about product features: 39",
+    "metadata": {}
+  }
+]
