@@ -1,4 +1,4 @@
- Day 2 – Data Engineering 
+Data Engineering 
 1. Generating a Golden Dataset : ex1_dataset_sprint
 
 We built a golden dataset — essentially an answer key that defines what “good” responses should look like. Golden sets anchor evaluation by providing high-confidence, human-verified examples.
