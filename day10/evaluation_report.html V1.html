@@ -1,0 +1,556 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stripe RAG Evaluation Report</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+        }
+        .summary {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .summary h2 {
+            margin-top: 0;
+            color: #333;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .metric-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        .metric-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 0.9em;
+            color: #666;
+            text-transform: uppercase;
+        }
+        .metric-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+        }
+        .metric-subtitle {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        .pass { color: #22c55e; }
+        .fail { color: #ef4444; }
+        .warning { color: #f59e0b; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #666;
+        }
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: #e5e7eb;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #22c55e 0%, #16a34a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            transition: width 0.3s ease;
+        }
+        .progress-fill.low {
+            background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+        }
+        .progress-fill.medium {
+            background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
+        }
+        
+        .recommendation {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .recommendation.critical {
+            background: #fee2e2;
+            border-left-color: #ef4444;
+        }
+        
+        .failure-section {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .failure-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #ef4444;
+        }
+        .failure-item h4 {
+            margin: 0 0 10px 0;
+            color: #ef4444;
+        }
+        .failure-detail {
+            font-size: 0.9em;
+            color: #666;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔬 Stripe RAG Evaluation Report</h1>
+        <p>Generated: 2025-11-20 17:49:29</p>
+        <p>Dataset: Stripe RAG Golden Dataset v1.0</p>
+    </div>
+    
+    <!-- EXECUTIVE SUMMARY -->
+    <div class="summary">
+        <h2>📊 Executive Summary</h2>
+        
+        <div class="metric-grid">
+            <div class="metric-card">
+                <h3>Single-Turn Pass Rate</h3>
+                <div class="metric-value fail">
+                    16.7%
+                </div>
+                <div class="metric-subtitle">5/30 tests passed</div>
+            </div>
+            
+            <div class="metric-card">
+                <h3>Multi-Turn Pass Rate</h3>
+                <div class="metric-value fail">
+                    0.0%
+                </div>
+                <div class="metric-subtitle">0/5 conversations passed</div>
+            </div>
+            
+            <div class="metric-card">
+                <h3>Avg Precision@K</h3>
+                <div class="metric-value fail">
+                    0.311
+                </div>
+                <div class="metric-subtitle">Retrieval accuracy</div>
+            </div>
+            
+            <div class="metric-card">
+                <h3>Avg Semantic Similarity</h3>
+                <div class="metric-value fail">
+                    0.604
+                </div>
+                <div class="metric-subtitle">Answer quality</div>
+            </div>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill low" 
+                 style="width: 16.666666666666664%">
+                Overall: 16.7%
+            </div>
+        </div>
+    </div>
+    
+    <!-- BY DIFFICULTY -->
+    <div class="summary">
+        <h2>📈 Performance by Difficulty</h2>
+        <table>
+            <tr>
+                <th>Difficulty</th>
+                <th>Passed</th>
+                <th>Total</th>
+                <th>Pass Rate</th>
+                <th>Progress</th>
+            </tr>
+
+            <tr>
+                <td><strong>Easy</strong></td>
+                <td>3</td>
+                <td>8</td>
+                <td class="fail">37.5%</td>
+                <td>
+                    <div class="progress-bar" style="height: 20px;">
+                        <div class="progress-fill low" 
+                             style="width: 37.5%; font-size: 0.8em;">
+                            38%
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>Medium</strong></td>
+                <td>0</td>
+                <td>6</td>
+                <td class="fail">0.0%</td>
+                <td>
+                    <div class="progress-bar" style="height: 20px;">
+                        <div class="progress-fill low" 
+                             style="width: 0.0%; font-size: 0.8em;">
+                            0%
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>Hard</strong></td>
+                <td>2</td>
+                <td>16</td>
+                <td class="fail">12.5%</td>
+                <td>
+                    <div class="progress-bar" style="height: 20px;">
+                        <div class="progress-fill low" 
+                             style="width: 12.5%; font-size: 0.8em;">
+                            12%
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    
+    <!-- BY CATEGORY -->
+    <div class="summary">
+        <h2>📁 Performance by Category</h2>
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Passed</th>
+                <th>Total</th>
+                <th>Pass Rate</th>
+            </tr>
+
+            <tr>
+                <td>webhooks</td>
+                <td>0</td>
+                <td>6</td>
+                <td class="fail">
+                    0.0%
+                </td>
+            </tr>
+
+            <tr>
+                <td>testing</td>
+                <td>0</td>
+                <td>3</td>
+                <td class="fail">
+                    0.0%
+                </td>
+            </tr>
+
+            <tr>
+                <td>authentication</td>
+                <td>0</td>
+                <td>2</td>
+                <td class="fail">
+                    0.0%
+                </td>
+            </tr>
+
+            <tr>
+                <td>subscriptions</td>
+                <td>0</td>
+                <td>4</td>
+                <td class="fail">
+                    0.0%
+                </td>
+            </tr>
+
+            <tr>
+                <td>disputes</td>
+                <td>0</td>
+                <td>2</td>
+                <td class="fail">
+                    0.0%
+                </td>
+            </tr>
+
+            <tr>
+                <td>errors</td>
+                <td>0</td>
+                <td>3</td>
+                <td class="fail">
+                    0.0%
+                </td>
+            </tr>
+
+            <tr>
+                <td>refunds</td>
+                <td>1</td>
+                <td>8</td>
+                <td class="fail">
+                    12.5%
+                </td>
+            </tr>
+
+            <tr>
+                <td>payments</td>
+                <td>1</td>
+                <td>3</td>
+                <td class="fail">
+                    33.3%
+                </td>
+            </tr>
+
+            <tr>
+                <td>out_of_scope</td>
+                <td>2</td>
+                <td>3</td>
+                <td class="warning">
+                    66.7%
+                </td>
+            </tr>
+
+            <tr>
+                <td>checkout</td>
+                <td>1</td>
+                <td>1</td>
+                <td class="pass">
+                    100.0%
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    
+    <!-- RETRIEVAL METRICS -->
+    <div class="summary">
+        <h2>🔍 Retrieval Quality Metrics</h2>
+        <div class="metric-grid">
+            <div class="metric-card">
+                <h3>Precision@K</h3>
+                <div class="metric-value">0.311</div>
+                <div class="metric-subtitle">Relevant docs / Retrieved docs</div>
+            </div>
+            <div class="metric-card">
+                <h3>Recall@K</h3>
+                <div class="metric-value">0.789</div>
+                <div class="metric-subtitle">Retrieved relevant / Total relevant</div>
+            </div>
+            <div class="metric-card">
+                <h3>MRR</h3>
+                <div class="metric-value">0.678</div>
+                <div class="metric-subtitle">Mean Reciprocal Rank</div>
+            </div>
+            <div class="metric-card">
+                <h3>Avg Top Similarity</h3>
+                <div class="metric-value">0.486</div>
+                <div class="metric-subtitle">Confidence score</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- FAILURE ANALYSIS -->
+    <div class="failure-section">
+        <h2>❌ Failure Analysis</h2>
+        
+        <div class="metric-grid">
+            <div class="metric-card">
+                <h3>Retrieval Failures</h3>
+                <div class="metric-value fail">24</div>
+                <div class="metric-subtitle">Tests with retrieval issues</div>
+            </div>
+            <div class="metric-card">
+                <h3>Answer Failures</h3>
+                <div class="metric-value fail">10</div>
+                <div class="metric-subtitle">Tests with answer quality issues</div>
+            </div>
+        </div>
+        
+        <h3>Failed Tests (Top 10):</h3>
+
+        <div class="failure-item">
+            <h4>basic_003 - webhooks (easy)</h4>
+            <div class="failure-detail"><strong>Question:</strong> What are webhooks in Stripe?</div>
+            <div class="failure-detail"><strong>Retrieval issues:</strong> Similarity 0.599 below threshold</div>
+            <div class="failure-detail"><strong>Answer issues:</strong> None</div>
+            <div class="failure-detail"><strong>Top similarity:</strong> 0.599</div>
+        </div>
+
+        <div class="failure-item">
+            <h4>basic_004 - testing (easy)</h4>
+            <div class="failure-detail"><strong>Question:</strong> How do I test Stripe without real money?</div>
+            <div class="failure-detail"><strong>Retrieval issues:</strong> Similarity 0.579 below threshold</div>
+            <div class="failure-detail"><strong>Answer issues:</strong> None</div>
+            <div class="failure-detail"><strong>Top similarity:</strong> 0.579</div>
+        </div>
+
+        <div class="failure-item">
+            <h4>basic_005 - authentication (easy)</h4>
+            <div class="failure-detail"><strong>Question:</strong> What's the difference between test and live API keys?</div>
+            <div class="failure-detail"><strong>Retrieval issues:</strong> Similarity 0.601 below threshold</div>
+            <div class="failure-detail"><strong>Answer issues:</strong> None</div>
+            <div class="failure-detail"><strong>Top similarity:</strong> 0.601</div>
+        </div>
+
+        <div class="failure-item">
+            <h4>basic_007 - subscriptions (easy)</h4>
+            <div class="failure-detail"><strong>Question:</strong> How do I create a subscription in Stripe?</div>
+            <div class="failure-detail"><strong>Retrieval issues:</strong> Similarity 0.626 below threshold</div>
+            <div class="failure-detail"><strong>Answer issues:</strong> None</div>
+            <div class="failure-detail"><strong>Top similarity:</strong> 0.626</div>
+        </div>
+
+        <div class="failure-item">
+            <h4>basic_008 - disputes (easy)</h4>
+            <div class="failure-detail"><strong>Question:</strong> What happens during a dispute?</div>
+            <div class="failure-detail"><strong>Retrieval issues:</strong> Similarity 0.539 below threshold</div>
+            <div class="failure-detail"><strong>Answer issues:</strong> None</div>
+            <div class="failure-detail"><strong>Top similarity:</strong> 0.539</div>
+        </div>
+
+        <div class="failure-item">
+            <h4>multihop_001 - refunds (medium)</h4>
+            <div class="failure-detail"><strong>Question:</strong> How do I test refunds without real money?</div>
+            <div class="failure-detail"><strong>Retrieval issues:</strong> Similarity 0.456 below threshold</div>
+            <div class="failure-detail"><strong>Answer issues:</strong> None</div>
+            <div class="failure-detail"><strong>Top similarity:</strong> 0.456</div>
+        </div>
+
+        <div class="failure-item">
+            <h4>multihop_002 - webhooks (medium)</h4>
+            <div class="failure-detail"><strong>Question:</strong> If a webhook notification fails, how do I retry it in test mode?</div>
+            <div class="failure-detail"><strong>Retrieval issues:</strong> Similarity 0.366 below threshold</div>
+            <div class="failure-detail"><strong>Answer issues:</strong> Low semantic similarity (0.359)</div>
+            <div class="failure-detail"><strong>Top similarity:</strong> 0.366</div>
+        </div>
+
+        <div class="failure-item">
+            <h4>multihop_003 - refunds (medium)</h4>
+            <div class="failure-detail"><strong>Question:</strong> Can I refund a payment that's still processing?</div>
+            <div class="failure-detail"><strong>Retrieval issues:</strong> Similarity 0.531 below threshold</div>
+            <div class="failure-detail"><strong>Answer issues:</strong> None</div>
+            <div class="failure-detail"><strong>Top similarity:</strong> 0.531</div>
+        </div>
+
+        <div class="failure-item">
+            <h4>multihop_004 - subscriptions (medium)</h4>
+            <div class="failure-detail"><strong>Question:</strong> How do I handle failed subscription payments?</div>
+            <div class="failure-detail"><strong>Retrieval issues:</strong> Similarity 0.537 below threshold, Required doc not in top K</div>
+            <div class="failure-detail"><strong>Answer issues:</strong> None</div>
+            <div class="failure-detail"><strong>Top similarity:</strong> 0.537</div>
+        </div>
+
+        <div class="failure-item">
+            <h4>multihop_005 - payments (medium)</h4>
+            <div class="failure-detail"><strong>Question:</strong> What's the difference between Checkout and Payment Intents API?</div>
+            <div class="failure-detail"><strong>Retrieval issues:</strong> Similarity 0.665 below threshold</div>
+            <div class="failure-detail"><strong>Answer issues:</strong> None</div>
+            <div class="failure-detail"><strong>Top similarity:</strong> 0.665</div>
+        </div>
+
+    </div>
+    
+    <!-- RECOMMENDATIONS -->
+    <div class="summary">
+        <h2>💡 Recommendations</h2>
+
+        <div class="recommendation critical">
+            <strong>🚨 Critical:</strong> Pass rate (16.7%) is below 80% threshold. 
+            System is not production-ready. Investigate and fix failures before deployment.
+        </div>
+
+        <div class="recommendation">
+            <strong>⚠️ Low Precision (0.311):</strong> System is retrieving too many irrelevant documents. 
+            Consider: improving embedding model, adding re-ranking, or increasing similarity threshold.
+        </div>
+
+        <div class="recommendation">
+            <strong>⚠️ Low Answer Quality (0.604):</strong> Generated answers don't match expected responses. 
+            Consider: improving generation prompt, using better LLM model, or providing more context to generator.
+        </div>
+
+        <div class="recommendation critical">
+            <strong>🚨 Low Confidence (0.486):</strong> Top retrieved documents have low similarity scores. 
+            This suggests embedding model isn't capturing semantic meaning well. Consider switching to a better embedding model.
+        </div>
+
+        <h3>Focus Areas (Worst Performing Failure Modes):</h3>
+        <ul>
+
+            <li><strong>multi_doc_needed</strong>: 0/5 (0.0%) - 
+            Prioritize fixing this failure type</li>
+
+            <li><strong>comparison_needed</strong>: 0/1 (0.0%) - 
+            Prioritize fixing this failure type</li>
+
+            <li><strong>vague_query</strong>: 0/1 (0.0%) - 
+            Prioritize fixing this failure type</li>
+
+        </ul>
+    </div>
+    
+    <div class="summary">
+        <h2>🎯 Next Steps</h2>
+        <ol>
+            <li><strong>Detailed Failure Analysis:</strong> Run analyze_failures.py to see specific examples of what's breaking</li>
+            <li><strong>Fix Retrieval:</strong> Focus on precision (too many irrelevant docs retrieved)</li>
+            <li><strong>Improve Embeddings:</strong> Low similarity scores suggest embedding quality issues</li>
+            <li><strong>Re-test:</strong> After fixes, re-run evaluation to measure improvement</li>
+            <li><strong>Iterate:</strong> Continue until pass rate ≥ 80%</li>
+        </ol>
+    </div>
+    
+    <div style="text-align: center; color: #666; margin-top: 40px; padding: 20px;">
+        <p>Generated by Stripe RAG Evaluation System</p>
+        <p>Report timestamp: 20251120_174218</p>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,2006 @@
+{
+  "results": {
+    "dataset_info": {
+      "name": "Stripe RAG Golden Dataset",
+      "version": "1.0",
+      "created_date": "2025-11-07",
+      "created_by": "TC",
+      "description": "Comprehensive golden dataset for Stripe RAG evaluation with single-turn and multi-turn conversations",
+      "total_test_cases": 35,
+      "single_turn_tests": 30,
+      "multi_turn_conversations": 5,
+      "total_individual_turns": 46
+    },
+    "single_turn_results": [
+      {
+        "test_id": "basic_001",
+        "question": "What is a Payment Intent in Stripe?",
+        "rag_answer": "A Payment Intent in Stripe is an object that encapsulates details about a transaction, such as the supported payment methods, the amount to collect, and the desired currency. It is used to track a payment from creation through checkout and can trigger additional authentication steps when required. The Payment Intent API allows for handling complex payment flows with a status that changes over the PaymentIntent’s lifecycle. Each PaymentIntent typically correlates with a single shopping cart or customer session in your application (The Payment Intents API).",
+        "expected_answer": "A Payment Intent is an object that represents your intent to collect payment from a customer. It tracks the payment lifecycle from creation through checkout, handles authentication when required, and updates its status as the payment progresses.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "top_similarity": 0.7406271249546705,
+          "meets_threshold": true,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": null,
+          "relevant_retrieved": [
+            "payment-intents"
+          ],
+          "retrieved_ids": [
+            "payment-intents",
+            "accept-a-payment",
+            "checkout"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.8492476920971863,
+          "length": 561,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "good"
+        },
+        "retrieval_pass": true,
+        "answer_pass": true,
+        "overall_pass": true,
+        "retrieval_failures": [],
+        "answer_failures": [],
+        "category": "payments",
+        "difficulty": "easy",
+        "failure_mode": "none"
+      },
+      {
+        "test_id": "basic_002",
+        "question": "How do I create a refund in Stripe?",
+        "rag_answer": "To create a refund in Stripe, you can issue refunds using the Refunds API or the Dashboard. Here’s how to do it using the Dashboard:\n\n1. Find the payment you want to refund in the Payments page.\n2. Click the overflow menu (⋮) to the right of the payment, then select \"Refund payment.\"\n3. By default, you’ll issue a full refund. For a partial refund, enter a different refund amount.\n4. Select a reason for the refund. If you select \"Other,\" you must add a note explaining the reason for the refund.\n5. Click \"Refund.\"\n\nAlternatively, you can issue a refund from the details page of a specific payment. You can also send refund receipts automatically or manually for each refund.\n\nFor bulk refunds, the Dashboard supports the bulk refunding of full payments by selecting the payments you want to refund and clicking \"Refund.\"\n\nThis information is based on the \"Issue refunds\" section of the \"Refund and cancel payments\" documentation.",
+        "expected_answer": "Create a refund by calling the Stripe API with the charge ID or Payment Intent ID. You can specify the amount for partial refunds or omit it for full refunds. The refunded amount returns to the customer's original payment method within 5-10 business days.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "top_similarity": 0.6549032577882394,
+          "meets_threshold": true,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": null,
+          "relevant_retrieved": [
+            "refunds"
+          ],
+          "retrieved_ids": [
+            "refunds",
+            "accept-a-payment",
+            "disputes"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.6976302224609787,
+          "length": 933,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "acceptable"
+        },
+        "retrieval_pass": true,
+        "answer_pass": true,
+        "overall_pass": true,
+        "retrieval_failures": [],
+        "answer_failures": [],
+        "category": "refunds",
+        "difficulty": "easy",
+        "failure_mode": "none"
+      },
+      {
+        "test_id": "basic_003",
+        "question": "What are webhooks in Stripe?",
+        "rag_answer": "Webhooks in Stripe are endpoints that allow your application to receive real-time event data when events happen in your Stripe account. Stripe sends webhook events to your app as a JSON payload that includes an Event object. This enables your integration to automatically trigger reactions to asynchronous events, such as payment confirmations, charge disputes, or successful recurring payments. \n\nAccording to the documentation, \"Receiving webhook events helps you respond to asynchronous events, such as when a customer’s bank confirms a payment, a customer disputes a charge or a recurring payment succeeds.\" You can create a webhook endpoint handler to receive these events and process them accordingly.",
+        "expected_answer": "Webhooks are automated notifications sent from Stripe to your server when events occur in your account, such as successful payments, failed charges, or subscription updates. They allow you to react to events asynchronously without polling the API.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 0.5,
+          "top_similarity": 0.5985192348001275,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": null,
+          "relevant_retrieved": [
+            "webhooks"
+          ],
+          "retrieved_ids": [
+            "best-practices",
+            "webhooks",
+            "error-handling"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.86330269591439,
+          "length": 707,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "good"
+        },
+        "retrieval_pass": false,
+        "answer_pass": true,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.599 below threshold"
+        ],
+        "answer_failures": [],
+        "category": "webhooks",
+        "difficulty": "easy",
+        "failure_mode": "none"
+      },
+      {
+        "test_id": "basic_004",
+        "question": "How do I test Stripe without real money?",
+        "rag_answer": "To test Stripe without using real money, you can simulate transactions in a sandbox environment using special testing values. According to the \"Testing\" documentation, you should use test API keys for all API calls when working with test cards. You can access your sandboxes using the account picker in the Dashboard.\n\nTest cards act as fake credit cards and allow you to simulate various scenarios, such as successful payments, card errors, disputes, and refunds. For example, you can use the test card number `4242 4242 4242 4242` for successful payments. \n\nMake sure to enter a valid future date and any three-digit CVC (four digits for American Express cards) when testing interactively. The documentation emphasizes that you should not use real card details for testing, as it is prohibited by the Stripe Services Agreement.\n\nFor more details, refer to the \"Testing\" section of the documentation.",
+        "expected_answer": "Use test mode with test API keys (prefixed with sk_test_ or pk_test_). Use test card numbers like 4242424242424242 for successful payments. Test cards can simulate various scenarios including declines, authentication requirements, and specific error codes. No real money is processed in test mode.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 0.3333333333333333,
+          "top_similarity": 0.5792569793952485,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": null,
+          "relevant_retrieved": [
+            "testing"
+          ],
+          "retrieved_ids": [
+            "keys",
+            "accept-a-payment",
+            "testing"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.7399291103408296,
+          "length": 901,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "acceptable"
+        },
+        "retrieval_pass": false,
+        "answer_pass": true,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.579 below threshold"
+        ],
+        "answer_failures": [],
+        "category": "testing",
+        "difficulty": "easy",
+        "failure_mode": "none"
+      },
+      {
+        "test_id": "basic_005",
+        "question": "What's the difference between test and live API keys?",
+        "rag_answer": "The difference between test and live API keys is as follows:\n\n- **Test API Keys**: These keys are used in a sandbox environment for testing purposes. They allow you to simulate transactions without moving any money and can be used to perform any API request without restriction while testing your integration. The documentation states, \"By default, you can use this key to perform any API request without restriction. Reserve this key for testing and development to make sure that you don’t accidentally modify your live customers or charges.\"\n\n- **Live API Keys**: These keys are used in live mode when you are ready to launch your integration and accept real money. The documentation mentions, \"In live mode, card networks and payment providers do process payments. API calls return real objects.\" \n\nEach mode has its own set of API keys, and objects in one mode aren’t accessible to the other.",
+        "expected_answer": "Test API keys (sk_test_/pk_test_) are for development and don't charge real money. Live API keys (sk_live_/pk_live_) process real payments in production. Test and live data are completely separate. Never use live keys in development environments or expose them in client-side code.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "top_similarity": 0.6005752940024974,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": null,
+          "relevant_retrieved": [
+            "keys"
+          ],
+          "retrieved_ids": [
+            "keys",
+            "testing",
+            "payment-intents"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.7519294545803943,
+          "length": 896,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "good"
+        },
+        "retrieval_pass": false,
+        "answer_pass": true,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.601 below threshold"
+        ],
+        "answer_failures": [],
+        "category": "authentication",
+        "difficulty": "easy",
+        "failure_mode": "none"
+      },
+      {
+        "test_id": "basic_006",
+        "question": "What is Stripe Checkout?",
+        "rag_answer": "Stripe Checkout is a low-code, prebuilt payment form that Stripe hosts or that you can embed into your website. It uses the Checkout Sessions API to create a Stripe-hosted Checkout page or embedded form, allowing you to accept one-time and subscription payments from over 40 local payment methods. Customers can enter their payment details on a Stripe-hosted payment page and then return to your site after payment completion. This information is found in the \"Use a pre-built Stripe-hosted Checkout page\" document.",
+        "expected_answer": "Stripe Checkout is a pre-built, Stripe-hosted payment page that handles the entire payment flow. It supports multiple payment methods, is mobile-optimized, handles 3D Secure authentication automatically, and reduces PCI compliance requirements since payment data never touches your server.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 0.5,
+          "top_similarity": 0.6613655905412346,
+          "meets_threshold": true,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": null,
+          "relevant_retrieved": [
+            "checkout"
+          ],
+          "retrieved_ids": [
+            "accept-a-payment",
+            "checkout",
+            "payment-intents"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.8415199314477515,
+          "length": 515,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "good"
+        },
+        "retrieval_pass": true,
+        "answer_pass": true,
+        "overall_pass": true,
+        "retrieval_failures": [],
+        "answer_failures": [],
+        "category": "checkout",
+        "difficulty": "easy",
+        "failure_mode": "none"
+      },
+      {
+        "test_id": "basic_007",
+        "question": "How do I create a subscription in Stripe?",
+        "rag_answer": "To create a subscription in Stripe, you can do so either in the Dashboard or using the API. When you create a subscription, it triggers an event that you should listen for using webhook endpoints to ensure your integration handles them properly. \n\nYou can also optionally create a trial that doesn’t require payments for the subscription, which sets the status to \"trialing.\" Once the trial ends, the subscription moves to \"active,\" and the customer is charged.\n\nFor more details, refer to the section titled \"Create the subscription\" in the documentation.",
+        "expected_answer": "Create a subscription by: 1) Creating a Product and Price that defines the recurring billing interval (monthly, yearly, etc.), 2) Creating a Customer object, 3) Creating a Subscription object that links the customer to the price. Stripe automatically charges the customer at each billing cycle.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.6666666666666666,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "top_similarity": 0.6258944940970249,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": null,
+          "relevant_retrieved": [
+            "overview",
+            "creating"
+          ],
+          "retrieved_ids": [
+            "overview",
+            "creating",
+            "accept-a-payment"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.6800011003280425,
+          "length": 556,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "acceptable"
+        },
+        "retrieval_pass": false,
+        "answer_pass": true,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.626 below threshold"
+        ],
+        "answer_failures": [],
+        "category": "subscriptions",
+        "difficulty": "easy",
+        "failure_mode": "none"
+      },
+      {
+        "test_id": "basic_008",
+        "question": "What happens during a dispute?",
+        "rag_answer": "During a dispute, also known as a chargeback, a cardholder questions a payment with their card issuer. The issuer then creates a formal dispute on the card network, which immediately reverses the payment. This action pulls the payment amount and one or more network dispute fees from Stripe, which subsequently debits your balance for the payment amount and the dispute fee. This information is found in the \"Disputes\" section of the documentation.",
+        "expected_answer": "When a customer disputes a charge with their bank, Stripe notifies you via webhook and email. The disputed amount is immediately withdrawn from your balance. You must submit evidence through the Dashboard or API. If you win, funds are returned. If you lose or don't respond, the customer keeps the refunded amount and you may incur a dispute fee.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "top_similarity": 0.5390913411600294,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": null,
+          "relevant_retrieved": [
+            "disputes"
+          ],
+          "retrieved_ids": [
+            "disputes",
+            "refunds",
+            "error-handling"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.7650119331496639,
+          "length": 448,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "good"
+        },
+        "retrieval_pass": false,
+        "answer_pass": true,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.539 below threshold"
+        ],
+        "answer_failures": [],
+        "category": "disputes",
+        "difficulty": "easy",
+        "failure_mode": "none"
+      },
+      {
+        "test_id": "multihop_001",
+        "question": "How do I test refunds without real money?",
+        "rag_answer": "To test refunds without using real money, you can simulate transactions in a sandbox environment using test API keys and test cards. The documentation states that you can simulate disputes and refunds using test cards, which act as fake credit cards. \n\nWhen testing interactively, you can use a test card number (e.g., 4242 4242 4242 4242) to create a payment and then issue a refund through the Dashboard or the Refunds API. The documentation mentions that you can simulate various scenarios, including refunds, without moving any actual money.\n\nFor more details, refer to the \"Testing\" section, which explains how to use test cards to simulate successful payments and refunds.",
+        "expected_answer": "Use test mode with test API keys and test card numbers. Create a test payment with a test card (like 4242424242424242), then create a refund on that test charge using the API. The refund will appear in your test data but no real money is processed.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.6666666666666666,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "top_similarity": 0.45647269223847203,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": true,
+          "relevant_retrieved": [
+            "refunds",
+            "testing"
+          ],
+          "retrieved_ids": [
+            "refunds",
+            "testing",
+            "keys"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.8169555073425473,
+          "length": 678,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "good"
+        },
+        "retrieval_pass": false,
+        "answer_pass": true,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.456 below threshold"
+        ],
+        "answer_failures": [],
+        "category": "refunds",
+        "difficulty": "medium",
+        "failure_mode": "multi_doc_needed"
+      },
+      {
+        "test_id": "multihop_002",
+        "question": "If a webhook notification fails, how do I retry it in test mode?",
+        "rag_answer": "I don't have information about that in the Stripe documentation.",
+        "expected_answer": "In test mode, manually retry webhooks from the Dashboard under Developers > Webhooks > [endpoint] > Events. Failed events show a 'Retry' button. Stripe also automatically retries failed webhooks with exponential backoff in both test and live modes.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.3333333333333333,
+          "recall_at_k": 0.5,
+          "mrr": 0.5,
+          "top_similarity": 0.3662157734007582,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": true,
+          "relevant_retrieved": [
+            "webhooks"
+          ],
+          "retrieved_ids": [
+            "best-practices",
+            "webhooks",
+            "error-handling"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.35868505875993745,
+          "length": 64,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "poor"
+        },
+        "retrieval_pass": false,
+        "answer_pass": false,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.366 below threshold"
+        ],
+        "answer_failures": [
+          "Low semantic similarity (0.359)"
+        ],
+        "category": "webhooks",
+        "difficulty": "medium",
+        "failure_mode": "multi_doc_needed"
+      },
+      {
+        "test_id": "multihop_003",
+        "question": "Can I refund a payment that's still processing?",
+        "rag_answer": "You cannot refund a payment that is still processing. According to the documentation, you can cancel a payment before it’s completed at no cost, but refunds can only be issued after a payment has succeeded. Specifically, it states, \"You can refund all or part of a payment after it succeeds.\" Therefore, if the payment is still processing, it cannot be refunded.",
+        "expected_answer": "No, you cannot refund a payment while it's processing. The Payment Intent status must be 'succeeded' before a refund can be created. If processing and you need to cancel, cancel the Payment Intent instead. Once complete, you can create a refund.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.3333333333333333,
+          "recall_at_k": 0.5,
+          "mrr": 1.0,
+          "top_similarity": 0.5314141764238455,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": true,
+          "relevant_retrieved": [
+            "refunds"
+          ],
+          "retrieved_ids": [
+            "refunds",
+            "disputes",
+            "overview"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.7982295419455677,
+          "length": 362,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "good"
+        },
+        "retrieval_pass": false,
+        "answer_pass": true,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.531 below threshold"
+        ],
+        "answer_failures": [],
+        "category": "refunds",
+        "difficulty": "medium",
+        "failure_mode": "multi_doc_needed"
+      },
+      {
+        "test_id": "multihop_004",
+        "question": "How do I handle failed subscription payments?",
+        "rag_answer": "To handle failed subscription payments, it is recommended to set the `payment_behavior` of a subscription to `default_incomplete`. This allows the subscription to have a status of `incomplete` if payment is required, enabling you to collect and confirm payment information to activate the subscription.\n\nIf you set `payment_behavior` to `allow_incomplete`, Stripe will immediately attempt to collect payment on the invoice. If the payment fails, the subscription’s status will change to `incomplete`. Alternatively, if you set `payment_behavior` to `error_if_incomplete`, the subscription creation will fail if the payment fails.\n\nYou can listen for subscription events with webhook endpoints to manage changes, such as notifying customers if a payment fails (see \"Update the subscription\" section). Additionally, you can check the subscription object for `subscription.status=active` to confirm if the invoice has been paid.\n\nThis information is derived from the \"Payment behavior\" and \"Update the subscription\" sections of the documentation.",
+        "expected_answer": "Stripe automatically retries failed subscription payments using Smart Retries. Handle the invoice.payment_failed webhook to notify customers. If all retries fail, subscription becomes past_due or canceled. Allow customers to update payment method to retry manually.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr": 0.0,
+          "top_similarity": 0.5372578093330266,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": false,
+          "relevant_retrieved": [],
+          "retrieved_ids": [
+            "overview",
+            "creating",
+            "refunds"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.6741270170088953,
+          "length": 1043,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "acceptable"
+        },
+        "retrieval_pass": false,
+        "answer_pass": true,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.537 below threshold",
+          "Required doc not in top K"
+        ],
+        "answer_failures": [],
+        "category": "subscriptions",
+        "difficulty": "medium",
+        "failure_mode": "multi_doc_needed"
+      },
+      {
+        "test_id": "multihop_005",
+        "question": "What's the difference between Checkout and Payment Intents API?",
+        "rag_answer": "The main difference between Checkout and the Payment Intents API lies in their integration approach and user experience.\n\n1. **Integration Type**:\n   - **Checkout**: It is a low-code, prebuilt payment form that can either be hosted by Stripe or embedded into your website using the Checkout Sessions API. It allows for a quick setup with limited customization options (as noted in the \"Use a pre-built Stripe-hosted Checkout page\" document).\n   - **Payment Intents API**: This API is designed for more complex payment flows, allowing for automatic authentication handling and tracking the payment lifecycle. It requires creating and confirming a PaymentIntent, which encapsulates transaction details (as described in \"The Payment Intents API\").\n\n2. **User Experience**:\n   - **Checkout**: Customers can enter their payment details on a Stripe-hosted page or an embedded form, with limited customization available for the UI (as mentioned in the \"Use a pre-built Stripe-hosted Checkout page\" document).\n   - **Payment Intents API**: It provides a more dynamic experience by allowing for additional authentication steps and handling various payment methods, including support for Strong Customer Authentication (SCA) (as highlighted in \"The Payment Intents API\").\n\nIn summary, Checkout is a simpler, low-code solution for accepting payments, while the Payment Intents API offers more flexibility and control for handling complex payment scenarios.",
+        "expected_answer": "Checkout is a pre-built hosted payment page - quick to integrate but less customizable. Payment Intents API gives full control over payment flow and UI but requires more development. Checkout handles the payment form, Payment Intents requires you to build it using Stripe Elements.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.6666666666666666,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "top_similarity": 0.6646747973752,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": true,
+          "relevant_retrieved": [
+            "payment-intents",
+            "checkout"
+          ],
+          "retrieved_ids": [
+            "payment-intents",
+            "checkout",
+            "accept-a-payment"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.8392051589813603,
+          "length": 1445,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "good"
+        },
+        "retrieval_pass": false,
+        "answer_pass": true,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.665 below threshold"
+        ],
+        "answer_failures": [],
+        "category": "payments",
+        "difficulty": "medium",
+        "failure_mode": "comparison_needed"
+      },
+      {
+        "test_id": "multihop_006",
+        "question": "How do I verify webhook signatures in test environment?",
+        "rag_answer": "I don't have information about that in the Stripe documentation.",
+        "expected_answer": "Get webhook signing secret from Dashboard under Developers > Webhooks > [endpoint]. In test mode, signing secret starts with 'whsec_test_'. Use Stripe's libraries to verify signatures by passing raw request body, signature header, and signing secret to verification function.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.6666666666666666,
+          "recall_at_k": 0.6666666666666666,
+          "mrr": 1.0,
+          "top_similarity": 0.41315441659601654,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": true,
+          "relevant_retrieved": [
+            "best-practices",
+            "webhooks"
+          ],
+          "retrieved_ids": [
+            "best-practices",
+            "webhooks",
+            "keys"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.34726645807399575,
+          "length": 64,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "poor"
+        },
+        "retrieval_pass": false,
+        "answer_pass": false,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.413 below threshold"
+        ],
+        "answer_failures": [
+          "Low semantic similarity (0.347)"
+        ],
+        "category": "webhooks",
+        "difficulty": "medium",
+        "failure_mode": "multi_doc_needed"
+      },
+      {
+        "test_id": "adversarial_001",
+        "question": "refund help!!!",
+        "rag_answer": "To issue a refund, you can use either the Refunds API or the Dashboard. Here’s how to do it using the Dashboard:\n\n1. Find the payment you want to refund on the Payments page.\n2. Click the overflow menu (⋮) next to the payment and select \"Refund payment.\"\n3. By default, a full refund will be issued. If you want to issue a partial refund, enter a different amount.\n4. Select a reason for the refund. If you choose \"Other,\" you must add a note explaining the reason.\n5. Click \"Refund.\"\n\nYou can also issue refunds in bulk for full payments by selecting multiple payments and clicking \"Refund.\" Note that partial refunds must be issued individually.\n\nRefunds use your available Stripe balance, and if your balance is insufficient, the refund will be held as pending until your balance is sufficient (see \"Refunds use your available Stripe balance\" section).\n\nIf you need more specific help or have a different question about refunds, please let me know!",
+        "expected_answer": "To create a refund in Stripe, you need the charge ID or Payment Intent ID. You can create full or partial refunds through the Dashboard or API. The refunded amount returns to the customer's original payment method within 5-10 business days. What specifically do you need help with regarding refunds?",
+        "retrieval_metrics": {
+          "precision_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "top_similarity": 0.300947950877858,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": true,
+          "relevant_retrieved": [
+            "refunds"
+          ],
+          "retrieved_ids": [
+            "refunds",
+            "disputes",
+            "error-handling"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.7296459664369396,
+          "length": 951,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "acceptable"
+        },
+        "retrieval_pass": false,
+        "answer_pass": true,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.301 below threshold"
+        ],
+        "answer_failures": [],
+        "category": "refunds",
+        "difficulty": "hard",
+        "failure_mode": "vague_query"
+      },
+      {
+        "test_id": "adversarial_002",
+        "question": "wehbook not wokring why",
+        "rag_answer": "I don't have information about that in the Stripe documentation.",
+        "expected_answer": "Common webhook issues include: 1) Endpoint not publicly accessible, 2) Not returning 200 status quickly enough (timeout), 3) Signature verification failing, 4) Endpoint URL changed. Check server logs, verify endpoint URL in Dashboard, ensure 200 status within 5 seconds.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr": 0.0,
+          "top_similarity": 0.23151364089786716,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": false,
+          "relevant_retrieved": [],
+          "retrieved_ids": [
+            "accept-a-payment",
+            "checkout",
+            "error-handling"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.11740531790407122,
+          "length": 64,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "poor"
+        },
+        "retrieval_pass": false,
+        "answer_pass": false,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.232 below threshold",
+          "Required doc not in top K"
+        ],
+        "answer_failures": [
+          "Low semantic similarity (0.117)"
+        ],
+        "category": "webhooks",
+        "difficulty": "hard",
+        "failure_mode": "typos"
+      },
+      {
+        "test_id": "adversarial_003",
+        "question": "customer says payment didnt go through but i see it in dashboard what do i do",
+        "rag_answer": "I don't have information about that in the Stripe documentation.",
+        "expected_answer": "Check: 1) Payment Intent status - might be 'requires_action' needing 3D Secure, 2) Failed attempts before success, 3) Webhook sent to your system, 4) Customer seeing pending bank charges. Show customer receipt or charge ID to confirm payment succeeded.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr": 0.0,
+          "top_similarity": 0.41270713883294446,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": false,
+          "relevant_retrieved": [],
+          "retrieved_ids": [
+            "refunds",
+            "accept-a-payment",
+            "disputes"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.31825984408516583,
+          "length": 64,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "poor"
+        },
+        "retrieval_pass": false,
+        "answer_pass": false,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.413 below threshold",
+          "Required doc not in top K"
+        ],
+        "answer_failures": [
+          "Low semantic similarity (0.318)"
+        ],
+        "category": "payments",
+        "difficulty": "hard",
+        "failure_mode": "no_punctuation"
+      },
+      {
+        "test_id": "adversarial_004",
+        "question": "test card not workign 4242",
+        "rag_answer": "The test card number 4242 4242 4242 4242 is a valid test card number for simulating successful payments. According to the documentation under \"Testing,\" you should enter this card number in the Dashboard or any payment form, use a valid future date (like 12/34), and any three-digit CVC (four digits for American Express cards). \n\nIf the test card is not working, ensure that you are using test API keys for all API calls, as stated in the \"How to use test cards\" section. Additionally, make sure you are not using real card details, as the Stripe Services Agreement prohibits testing in live mode with real payment method details. \n\nIf you continue to experience issues, I don't have information about that in the Stripe documentation.",
+        "expected_answer": "The test card 4242424242424242 (full 16 digits) should work in test mode. Check: 1) Using test keys (pk_test_/sk_test_), 2) In test mode in Dashboard, 3) CVC, expiration, ZIP valid format. Check error message for details.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "top_similarity": 0.4417476197998612,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": true,
+          "relevant_retrieved": [
+            "testing"
+          ],
+          "retrieved_ids": [
+            "testing",
+            "keys",
+            "error-handling"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.7324083094900227,
+          "length": 736,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "acceptable"
+        },
+        "retrieval_pass": false,
+        "answer_pass": true,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.442 below threshold"
+        ],
+        "answer_failures": [],
+        "category": "testing",
+        "difficulty": "hard",
+        "failure_mode": "typos_incomplete"
+      },
+      {
+        "test_id": "adversarial_005",
+        "question": "how much does stripe cost and can i refund and what about disputes",
+        "rag_answer": "I don't have information about that in the Stripe documentation.",
+        "expected_answer": "Stripe typically charges 2.9% + $0.30 per successful card charge. Refunds: You can issue full or partial refunds - Stripe fee is not returned. Disputes: $15 fee if you lose. Each topic has more details - what would you like to focus on first?",
+        "retrieval_metrics": {
+          "precision_at_k": 0.6666666666666666,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "top_similarity": 0.6066185283026766,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": true,
+          "relevant_retrieved": [
+            "disputes",
+            "refunds"
+          ],
+          "retrieved_ids": [
+            "disputes",
+            "refunds",
+            "overview"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.4899544968154739,
+          "length": 64,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "poor"
+        },
+        "retrieval_pass": false,
+        "answer_pass": false,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.607 below threshold"
+        ],
+        "answer_failures": [
+          "Low semantic similarity (0.490)"
+        ],
+        "category": "refunds",
+        "difficulty": "hard",
+        "failure_mode": "multi_part_question"
+      },
+      {
+        "test_id": "adversarial_006",
+        "question": "URGENT: payment failed need fix ASAP customer angry",
+        "rag_answer": "If a payment has failed, it could be due to various reasons such as the customer's bank or card issuer being unable to process the refund. According to the documentation, a refund can fail if there are issues like a closed bank account or a problem with the card. When this happens, the bank returns the refunded amount to Stripe, and it is added back to your Stripe account balance. This process can take up to 30 days from the post date.\n\nThe documentation states: \"A refund can fail if the customer’s bank or card issuer can’t process it. For example, a closed bank account or a problem with the card can cause a refund to fail.\" \n\nYou may want to check the status of the refund in your Stripe account and communicate with the customer about the potential delay. If you need to resolve a negative balance, you can do so by collecting payments or topping up your account balance. \n\nFor further assistance, you might need to contact Stripe support directly.",
+        "expected_answer": "Check error code in Dashboard or API response. Common failures: insufficient_funds, card_declined, expired_card, incorrect_cvc. Ask customer to verify card details, try different payment method, or contact their bank. Send new payment link if needed.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr": 0.0,
+          "top_similarity": 0.38198878505319145,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": false,
+          "relevant_retrieved": [],
+          "retrieved_ids": [
+            "refunds",
+            "accept-a-payment",
+            "testing"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.4786115099979843,
+          "length": 958,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "poor"
+        },
+        "retrieval_pass": false,
+        "answer_pass": false,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.382 below threshold",
+          "Required doc not in top K"
+        ],
+        "answer_failures": [
+          "Low semantic similarity (0.479)"
+        ],
+        "category": "errors",
+        "difficulty": "hard",
+        "failure_mode": "all_caps_urgent"
+      },
+      {
+        "test_id": "adversarial_007",
+        "question": "it doesn't work",
+        "rag_answer": "I don't have information about that in the Stripe documentation.",
+        "expected_answer": "I need more details to help effectively. What specifically isn't working? Common issues: payment processing, webhook delivery, refund creation, subscription billing, API authentication, or test mode setup? Any error messages? Test or live mode?",
+        "retrieval_metrics": {
+          "precision_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 0.5,
+          "top_similarity": 0.16865094950276427,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": true,
+          "relevant_retrieved": [
+            "error-handling"
+          ],
+          "retrieved_ids": [
+            "testing",
+            "error-handling",
+            "accept-a-payment"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.3279633868351922,
+          "length": 64,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "poor"
+        },
+        "retrieval_pass": false,
+        "answer_pass": false,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.169 below threshold"
+        ],
+        "answer_failures": [
+          "Low semantic similarity (0.328)"
+        ],
+        "category": "errors",
+        "difficulty": "hard",
+        "failure_mode": "maximally_vague"
+      },
+      {
+        "test_id": "adversarial_008",
+        "question": "subcription customer paid but account says no payment recieved",
+        "rag_answer": "If your subscription customer has paid but the account indicates that no payment has been received, you should confirm whether the invoice has been paid. According to the documentation, you can do this by:\n\n1. Setting up a webhook endpoint or another type of event destination to listen for the `invoice.paid` event.\n2. Manually checking the subscription object for `subscription.status=active`. The status becomes active when the invoice has been paid, either through an automatic charge or by the customer paying manually.\n\nIf the payment was not successful, the subscription status may have updated to `incomplete_expired`, and the invoice would become void. You can find more details in the sections about \"The customer pays\" and \"To confirm whether the invoice has been paid.\"",
+        "expected_answer": "Check: 1) Subscription status - might be 'incomplete' if payment requires action, 2) Invoice status and payment status, 3) Webhook delivery - ensure invoice.paid reached your system, 4) Payment timing delays, 5) Test vs live mode. Often a webhook delivery issue.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr": 0.0,
+          "top_similarity": 0.433638515449816,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": false,
+          "relevant_retrieved": [],
+          "retrieved_ids": [
+            "overview",
+            "creating",
+            "refunds"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.6993901449469115,
+          "length": 781,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "acceptable"
+        },
+        "retrieval_pass": false,
+        "answer_pass": true,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.434 below threshold",
+          "Required doc not in top K"
+        ],
+        "answer_failures": [],
+        "category": "subscriptions",
+        "difficulty": "hard",
+        "failure_mode": "typos_complex"
+      },
+      {
+        "test_id": "edge_001",
+        "question": "Can I refund more than the original charge amount?",
+        "rag_answer": "No, you cannot refund more than the original charge amount. The documentation states, \"You can issue more than one refund against a charge, but you can’t refund a total greater than the original charge amount.\"",
+        "expected_answer": "No, you cannot refund more than the original charge amount. Maximum refund is original charge minus any previously refunded amounts. To send additional money beyond the refund, you need a separate payout or transfer.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "top_similarity": 0.4695820318097547,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": true,
+          "relevant_retrieved": [
+            "refunds"
+          ],
+          "retrieved_ids": [
+            "refunds",
+            "disputes",
+            "overview"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.835852019935323,
+          "length": 210,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "good"
+        },
+        "retrieval_pass": false,
+        "answer_pass": true,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.470 below threshold"
+        ],
+        "answer_failures": [],
+        "category": "refunds",
+        "difficulty": "hard",
+        "failure_mode": "edge_case"
+      },
+      {
+        "test_id": "edge_002",
+        "question": "What happens if I create a webhook endpoint after events already occurred?",
+        "rag_answer": "I don't have information about that in the Stripe documentation.",
+        "expected_answer": "Webhooks only sent for events AFTER endpoint creation. Past events not retroactively sent. To process historical events, query Events API directly with date filters. Set up webhooks before going live or have API polling backup.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 0.5,
+          "top_similarity": 0.4499653356310676,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": true,
+          "relevant_retrieved": [
+            "webhooks"
+          ],
+          "retrieved_ids": [
+            "best-practices",
+            "webhooks",
+            "error-handling"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.1342887779806329,
+          "length": 64,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "poor"
+        },
+        "retrieval_pass": false,
+        "answer_pass": false,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.450 below threshold"
+        ],
+        "answer_failures": [
+          "Low semantic similarity (0.134)"
+        ],
+        "category": "webhooks",
+        "difficulty": "hard",
+        "failure_mode": "edge_case"
+      },
+      {
+        "test_id": "edge_003",
+        "question": "Can I test disputes in test mode?",
+        "rag_answer": "Yes, you can test disputes in test mode. The documentation states that when testing your integration, you can simulate various scenarios, including disputes and refunds, using special testing values in a sandbox. This is mentioned in the \"Testing\" document under the section that describes the capabilities of test cards, which includes \"Disputes and refunds.\"",
+        "expected_answer": "Yes, use test card 4000000000000259 to create a charge you can manually dispute in Dashboard. Click 'Create test dispute' on the test charge. This simulates disputes without real money for testing your workflow.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.6666666666666666,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "top_similarity": 0.48136443979162347,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": true,
+          "relevant_retrieved": [
+            "disputes",
+            "testing"
+          ],
+          "retrieved_ids": [
+            "disputes",
+            "testing",
+            "keys"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.6908377121696526,
+          "length": 360,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "acceptable"
+        },
+        "retrieval_pass": false,
+        "answer_pass": true,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.481 below threshold"
+        ],
+        "answer_failures": [],
+        "category": "disputes",
+        "difficulty": "hard",
+        "failure_mode": "edge_case"
+      },
+      {
+        "test_id": "edge_004",
+        "question": "What's the maximum time I have to refund a charge?",
+        "rag_answer": "I don't have information about that in the Stripe documentation.",
+        "expected_answer": "For card charges, typically 180 days (6 months) from original charge date, though this varies by card network. After this window, refund API rejects the request. Use different method like bank transfer after window closes.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "top_similarity": 0.4781811286543739,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": true,
+          "relevant_retrieved": [
+            "refunds"
+          ],
+          "retrieved_ids": [
+            "refunds",
+            "disputes",
+            "overview"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.25158833174694417,
+          "length": 64,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "poor"
+        },
+        "retrieval_pass": false,
+        "answer_pass": false,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.478 below threshold"
+        ],
+        "answer_failures": [
+          "Low semantic similarity (0.252)"
+        ],
+        "category": "refunds",
+        "difficulty": "hard",
+        "failure_mode": "edge_case"
+      },
+      {
+        "test_id": "edge_005",
+        "question": "Can I use the same API keys in multiple applications?",
+        "rag_answer": "I don't have information about that in the Stripe documentation.",
+        "expected_answer": "Yes, you can use same API keys across multiple applications. However, for security, consider Restricted API Keys limiting permissions per application. Follows least privilege principle and easier to rotate if one application compromised.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "top_similarity": 0.40892780080747265,
+          "meets_threshold": false,
+          "should_not_retrieve_pass": null,
+          "required_doc_found": true,
+          "relevant_retrieved": [
+            "keys"
+          ],
+          "retrieved_ids": [
+            "keys",
+            "testing",
+            "payment-intents"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.12713321370790362,
+          "length": 64,
+          "length_ok": true,
+          "knows_limitation": null,
+          "quality": "poor"
+        },
+        "retrieval_pass": false,
+        "answer_pass": false,
+        "overall_pass": false,
+        "retrieval_failures": [
+          "Similarity 0.409 below threshold"
+        ],
+        "answer_failures": [
+          "Low semantic similarity (0.127)"
+        ],
+        "category": "authentication",
+        "difficulty": "hard",
+        "failure_mode": "edge_case"
+      },
+      {
+        "test_id": "trick_001",
+        "question": "What's Stripe's revenue last year?",
+        "rag_answer": "I don't have information about that in the Stripe documentation.",
+        "expected_answer": "I don't have information about Stripe's financial performance or revenue in the documentation. This would be found in investor relations materials or public filings, not developer documentation. Can I help with Stripe's payment APIs or features instead?",
+        "retrieval_metrics": {
+          "precision_at_k": 0.0,
+          "recall_at_k": 1.0,
+          "mrr": 0.0,
+          "top_similarity": 0.41357317512580943,
+          "meets_threshold": true,
+          "should_not_retrieve_pass": true,
+          "required_doc_found": null,
+          "relevant_retrieved": [],
+          "retrieved_ids": [
+            "accept-a-payment",
+            "refunds",
+            "checkout"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.726996849393162,
+          "length": 64,
+          "length_ok": true,
+          "knows_limitation": true,
+          "quality": "acceptable"
+        },
+        "retrieval_pass": true,
+        "answer_pass": true,
+        "overall_pass": true,
+        "retrieval_failures": [],
+        "answer_failures": [],
+        "category": "out_of_scope",
+        "difficulty": "hard",
+        "failure_mode": "info_not_in_docs"
+      },
+      {
+        "test_id": "trick_002",
+        "question": "How does Stripe compare to PayPal pricing?",
+        "rag_answer": "I don't have information about that in the Stripe documentation.",
+        "expected_answer": "I don't have competitor pricing information in Stripe documentation. Stripe's pricing is typically 2.9% + $0.30 per successful card charge in the US, but for competitor comparisons, check each provider's website. I can provide detailed Stripe pricing information if helpful.",
+        "retrieval_metrics": {
+          "precision_at_k": 0.0,
+          "recall_at_k": 1.0,
+          "mrr": 0.0,
+          "top_similarity": 0.4636870633885843,
+          "meets_threshold": true,
+          "should_not_retrieve_pass": true,
+          "required_doc_found": null,
+          "relevant_retrieved": [],
+          "retrieved_ids": [
+            "checkout",
+            "accept-a-payment",
+            "keys"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.575484282920718,
+          "length": 64,
+          "length_ok": true,
+          "knows_limitation": true,
+          "quality": "poor"
+        },
+        "retrieval_pass": true,
+        "answer_pass": false,
+        "overall_pass": false,
+        "retrieval_failures": [],
+        "answer_failures": [
+          "Low semantic similarity (0.575)"
+        ],
+        "category": "out_of_scope",
+        "difficulty": "hard",
+        "failure_mode": "info_not_in_docs"
+      },
+      {
+        "test_id": "trick_003",
+        "question": "Who is Stripe's CEO and where are they based?",
+        "rag_answer": "I don't have information about that in the Stripe documentation.",
+        "expected_answer": "I don't have information about Stripe's leadership or office locations in the developer documentation. This would be on Stripe's About page or press materials. The documentation focuses on technical integration and API usage. Can I help with Stripe's APIs?",
+        "retrieval_metrics": {
+          "precision_at_k": 0.0,
+          "recall_at_k": 1.0,
+          "mrr": 0.0,
+          "top_similarity": 0.4714076837758059,
+          "meets_threshold": true,
+          "should_not_retrieve_pass": true,
+          "required_doc_found": null,
+          "relevant_retrieved": [],
+          "retrieved_ids": [
+            "accept-a-payment",
+            "checkout",
+            "error-handling"
+          ]
+        },
+        "answer_metrics": {
+          "semantic_similarity": 0.7037896509229825,
+          "length": 64,
+          "length_ok": true,
+          "knows_limitation": true,
+          "quality": "acceptable"
+        },
+        "retrieval_pass": true,
+        "answer_pass": true,
+        "overall_pass": true,
+        "retrieval_failures": [],
+        "answer_failures": [],
+        "category": "out_of_scope",
+        "difficulty": "hard",
+        "failure_mode": "info_not_in_docs"
+      }
+    ],
+    "multiturn_results": [
+      {
+        "conversation_id": "multiturn_001",
+        "conversation_name": "Refund Clarification Flow",
+        "turns": [
+          {
+            "turn": 1,
+            "question": "How do I create a refund?",
+            "rag_answer": "To create a refund, you can issue refunds using either the Refunds API or the Dashboard. Here’s how to do it using the Dashboard:\n\n1. Find the payment you want to refund in the Payments page.\n2. Click the overflow menu (⋮) to the right of the payment, then select \"Refund payment.\"\n3. By default, you’ll issue a full refund. For a partial refund, enter a different refund amount.\n4. Select a reason for the refund. If you select \"Other,\" you must add a note explaining the reason for the refund.\n5. Click \"Refund.\"\n\nAlternatively, you can issue a refund from the details page of a specific payment. You can also send refund receipts automatically or manually for each refund.\n\nFor bulk refunds, the Dashboard supports the bulk refunding of full payments. You can select multiple payments by ticking the box to the left of each payment and then click \"Refund\" to select a reason. Note that partial refunds must be issued individually.\n\nThis information is sourced from the \"Issue refunds\" section of the \"Refund and cancel payments\" documentation.",
+            "expected_answer": "To create a refund in Stripe, you need the charge ID or Payment Intent ID. You can create full or partial refunds through the Dashboard or API. Call the Refunds API with the charge/payment intent ID and optionally specify an amount for partial refunds.",
+            "retrieval_metrics": {
+              "precision_at_k": 0.3333333333333333,
+              "recall_at_k": 1.0,
+              "mrr": 1.0,
+              "top_similarity": 0.5533626188654814,
+              "meets_threshold": false,
+              "should_not_retrieve_pass": null,
+              "required_doc_found": true,
+              "relevant_retrieved": [
+                "refunds"
+              ],
+              "retrieved_ids": [
+                "refunds",
+                "disputes",
+                "accept-a-payment"
+              ]
+            },
+            "answer_metrics": {
+              "semantic_similarity": 0.6262667976223935,
+              "length": 1046,
+              "length_ok": true,
+              "knows_limitation": null,
+              "quality": "acceptable"
+            },
+            "context_needed": [],
+            "must_remember": ""
+          },
+          {
+            "turn": 2,
+            "question": "What if I don't have the charge ID?",
+            "rag_answer": "I don't have information about that in the Stripe documentation.",
+            "expected_answer": "You can find the charge ID in the Stripe Dashboard under Payments. Alternatively, retrieve it via API using customer ID, payment intent ID, or by searching payments. Charge ID starts with 'ch_' and uniquely identifies the payment.",
+            "retrieval_metrics": {
+              "precision_at_k": 0.3333333333333333,
+              "recall_at_k": 0.5,
+              "mrr": 0.5,
+              "top_similarity": 0.29277375964650765,
+              "meets_threshold": false,
+              "should_not_retrieve_pass": null,
+              "required_doc_found": true,
+              "relevant_retrieved": [
+                "payment-intents"
+              ],
+              "retrieved_ids": [
+                "testing",
+                "payment-intents",
+                "error-handling"
+              ]
+            },
+            "answer_metrics": {
+              "semantic_similarity": 0.4678160313385524,
+              "length": 64,
+              "length_ok": true,
+              "knows_limitation": null,
+              "quality": "poor"
+            },
+            "context_needed": [
+              "turn_1"
+            ],
+            "must_remember": "User is trying to create a refund (from turn 1)"
+          },
+          {
+            "turn": 3,
+            "question": "Can I test this without using real money?",
+            "rag_answer": "Yes, you can test your integration without using real money by simulating transactions in a sandbox environment using special testing values. According to the \"Testing\" documentation, you can use test cards that act as fake credit cards to simulate various payment scenarios without moving any money. It is important to use test API keys for all API calls during testing.",
+            "expected_answer": "Yes, test refunds in test mode using test API keys (sk_test_/pk_test_). Create a test payment first with test card 4242424242424242, then create refund on that test charge. No real money processed in test mode.",
+            "retrieval_metrics": {
+              "precision_at_k": 0.3333333333333333,
+              "recall_at_k": 0.5,
+              "mrr": 1.0,
+              "top_similarity": 0.4321460653280421,
+              "meets_threshold": false,
+              "should_not_retrieve_pass": null,
+              "required_doc_found": true,
+              "relevant_retrieved": [
+                "testing"
+              ],
+              "retrieved_ids": [
+                "testing",
+                "keys",
+                "accept-a-payment"
+              ]
+            },
+            "answer_metrics": {
+              "semantic_similarity": 0.623360296519932,
+              "length": 371,
+              "length_ok": true,
+              "knows_limitation": null,
+              "quality": "acceptable"
+            },
+            "context_needed": [
+              "turn_1",
+              "turn_2"
+            ],
+            "must_remember": "User wants to test the refund process"
+          }
+        ],
+        "overall_pass": false,
+        "category": "refunds",
+        "difficulty": "hard"
+      },
+      {
+        "conversation_id": "multiturn_002",
+        "conversation_name": "Webhook Debugging Flow",
+        "turns": [
+          {
+            "turn": 1,
+            "question": "My webhook isn't working",
+            "rag_answer": "To troubleshoot your webhook not working, consider the following steps based on the documentation:\n\n1. **Create a Webhook Endpoint Handler**: Ensure you have set up an HTTP or HTTPS endpoint function that can accept POST requests with a JSON payload consisting of an event object. This is mentioned in the \"Create a handler\" section.\n\n2. **Test Locally**: Use the Stripe CLI to test your webhook endpoint handler locally. This can help identify if the issue is with your local setup.\n\n3. **Secure Your Webhook Endpoint**: Make sure your webhook endpoint is publicly accessible and uses HTTPS after development. The documentation states that after your endpoint is publicly accessible, it must use HTTPS.\n\n4. **Return a Successful Status Code**: Your endpoint should quickly return a successful status code (2xx) before executing any complex logic. This is crucial to avoid timeouts, as highlighted in the \"Create a handler\" section.\n\n5. **Check Event Types**: If you are using an organization event destination, be aware of the limitations regarding certain event types, such as `issuing_authorization.request` and `checkout_sessions.completed`. The documentation specifies that these events require specific handling in a Stripe account within the organization.\n\n6. **Webhook Signing**: Ensure that you have configured webhook signing correctly. The documentation mentions checking the endpoint secret to verify the signature.\n\nIf you have followed these steps and your webhook is still not working, I don't have information about that in the Stripe documentation.",
+            "expected_answer": "Common webhook issues: endpoint not publicly accessible, not returning 200 status quickly (5 second timeout), signature verification failing, or incorrect endpoint URL. Check server logs and webhook logs in Dashboard.",
+            "retrieval_metrics": {
+              "precision_at_k": 0.6666666666666666,
+              "recall_at_k": 1.0,
+              "mrr": 1.0,
+              "top_similarity": 0.43817344720822465,
+              "meets_threshold": false,
+              "should_not_retrieve_pass": null,
+              "required_doc_found": true,
+              "relevant_retrieved": [
+                "best-practices",
+                "webhooks"
+              ],
+              "retrieved_ids": [
+                "best-practices",
+                "webhooks",
+                "error-handling"
+              ]
+            },
+            "answer_metrics": {
+              "semantic_similarity": 0.5909537097560245,
+              "length": 1565,
+              "length_ok": true,
+              "knows_limitation": null,
+              "quality": "poor"
+            },
+            "context_needed": [],
+            "must_remember": ""
+          },
+          {
+            "turn": 2,
+            "question": "Where do I find those logs?",
+            "rag_answer": "I don't have information about that in the Stripe documentation.",
+            "expected_answer": "Go to Stripe Dashboard, navigate to Developers > Webhooks, select your endpoint, click on events to see delivery attempts, response codes, and error details.",
+            "retrieval_metrics": {
+              "precision_at_k": 0.3333333333333333,
+              "recall_at_k": 1.0,
+              "mrr": 0.5,
+              "top_similarity": 0.21934180352965157,
+              "meets_threshold": false,
+              "should_not_retrieve_pass": null,
+              "required_doc_found": true,
+              "relevant_retrieved": [
+                "webhooks"
+              ],
+              "retrieved_ids": [
+                "best-practices",
+                "webhooks",
+                "accept-a-payment"
+              ]
+            },
+            "answer_metrics": {
+              "semantic_similarity": 0.44974433436715866,
+              "length": 64,
+              "length_ok": true,
+              "knows_limitation": null,
+              "quality": "poor"
+            },
+            "context_needed": [
+              "turn_1"
+            ],
+            "must_remember": "User is debugging webhook issues"
+          },
+          {
+            "turn": 3,
+            "question": "It says 'no response'",
+            "rag_answer": "The phrase 'no response' typically indicates that there was no error encountered during the API call. According to the error handling documentation, if no error occurs, the output will simply state \"No error.\" This is demonstrated in the Ruby example function where, if no exceptions are raised, it prints \"No error.\" \n\nYou can refer to the section on \"Catch exceptions\" where it states: \"else puts 'No error.'\" This indicates that if the API call is successful and no exceptions are caught, you will receive a 'no response' or similar confirmation of success.",
+            "expected_answer": "'No response' means Stripe didn't receive response within 5 seconds. Check: server accessible, endpoint returns 200 immediately, no network/firewall blocks, server not timing out.",
+            "retrieval_metrics": {
+              "precision_at_k": 0.0,
+              "recall_at_k": 0.0,
+              "mrr": 0.0,
+              "top_similarity": 0.2669697653795728,
+              "meets_threshold": false,
+              "should_not_retrieve_pass": null,
+              "required_doc_found": false,
+              "relevant_retrieved": [],
+              "retrieved_ids": [
+                "error-handling",
+                "disputes",
+                "accept-a-payment"
+              ]
+            },
+            "answer_metrics": {
+              "semantic_similarity": 0.5250585453808115,
+              "length": 560,
+              "length_ok": true,
+              "knows_limitation": null,
+              "quality": "poor"
+            },
+            "context_needed": [
+              "turn_1",
+              "turn_2"
+            ],
+            "must_remember": "User found 'no response' error in logs"
+          },
+          {
+            "turn": 4,
+            "question": "How do I return 200 status?",
+            "rag_answer": "To return a 200 status, your webhook endpoint function must quickly return a successful status code (2xx) prior to any complex logic that might cause a timeout. For example, you must return a 200 response before updating a customer’s invoice as paid in your accounting system. This is mentioned in the section titled \"Create a handler\" in the documentation.",
+            "expected_answer": "Return HTTP 200 immediately upon receiving webhook, before processing. Process event asynchronously in queue or background job after acknowledging receipt.",
+            "retrieval_metrics": {
+              "precision_at_k": 0.3333333333333333,
+              "recall_at_k": 1.0,
+              "mrr": 0.5,
+              "top_similarity": 0.2866207773323517,
+              "meets_threshold": false,
+              "should_not_retrieve_pass": null,
+              "required_doc_found": true,
+              "relevant_retrieved": [
+                "best-practices"
+              ],
+              "retrieved_ids": [
+                "accept-a-payment",
+                "best-practices",
+                "webhooks"
+              ]
+            },
+            "answer_metrics": {
+              "semantic_similarity": 0.6377646029929177,
+              "length": 357,
+              "length_ok": true,
+              "knows_limitation": null,
+              "quality": "acceptable"
+            },
+            "context_needed": [
+              "turn_1",
+              "turn_2",
+              "turn_3"
+            ],
+            "must_remember": "User needs to fix timeout by returning 200 quickly"
+          }
+        ],
+        "overall_pass": false,
+        "category": "webhooks",
+        "difficulty": "hard"
+      },
+      {
+        "conversation_id": "multiturn_003",
+        "conversation_name": "Payment Failure Investigation",
+        "turns": [
+          {
+            "turn": 1,
+            "question": "Customer says payment failed but I don't see it",
+            "rag_answer": "I don't have information about that in the Stripe documentation.",
+            "expected_answer": "Check: 1) Correct mode (test vs live), 2) Customer's exact email/ID, 3) Failed attempts in payment intent, 4) Ask customer for error message or screenshot.",
+            "retrieval_metrics": {
+              "precision_at_k": 0.0,
+              "recall_at_k": 0.0,
+              "mrr": 0.0,
+              "top_similarity": 0.4495162833583171,
+              "meets_threshold": false,
+              "should_not_retrieve_pass": null,
+              "required_doc_found": false,
+              "relevant_retrieved": [],
+              "retrieved_ids": [
+                "accept-a-payment",
+                "refunds",
+                "testing"
+              ]
+            },
+            "answer_metrics": {
+              "semantic_similarity": 0.2629384563586508,
+              "length": 64,
+              "length_ok": true,
+              "knows_limitation": null,
+              "quality": "poor"
+            },
+            "context_needed": [],
+            "must_remember": ""
+          },
+          {
+            "turn": 2,
+            "question": "They sent a screenshot showing 'card_declined'",
+            "rag_answer": "I don't have information about that in the Stripe documentation.",
+            "expected_answer": "card_declined means bank rejected payment. Customer should verify card details, contact bank, or try different payment method. You cannot override this.",
+            "retrieval_metrics": {
+              "precision_at_k": 0.3333333333333333,
+              "recall_at_k": 1.0,
+              "mrr": 0.3333333333333333,
+              "top_similarity": 0.37893752852968343,
+              "meets_threshold": false,
+              "should_not_retrieve_pass": null,
+              "required_doc_found": false,
+              "relevant_retrieved": [
+                "error-handling"
+              ],
+              "retrieved_ids": [
+                "disputes",
+                "refunds",
+                "error-handling"
+              ]
+            },
+            "answer_metrics": {
+              "semantic_similarity": 0.2916128887987508,
+              "length": 64,
+              "length_ok": true,
+              "knows_limitation": null,
+              "quality": "poor"
+            },
+            "context_needed": [
+              "turn_1"
+            ],
+            "must_remember": "User investigating payment failure"
+          },
+          {
+            "turn": 3,
+            "question": "Can I retry it for them?",
+            "rag_answer": "I don't have information about that in the Stripe documentation.",
+            "expected_answer": "You can send new payment link, but cannot force retry declined card. Customer must fix issue with bank or use different payment method.",
+            "retrieval_metrics": {
+              "precision_at_k": 0.3333333333333333,
+              "recall_at_k": 0.5,
+              "mrr": 0.5,
+              "top_similarity": 0.25407225727993893,
+              "meets_threshold": false,
+              "should_not_retrieve_pass": null,
+              "required_doc_found": true,
+              "relevant_retrieved": [
+                "error-handling"
+              ],
+              "retrieved_ids": [
+                "refunds",
+                "error-handling",
+                "disputes"
+              ]
+            },
+            "answer_metrics": {
+              "semantic_similarity": 0.29150912824100317,
+              "length": 64,
+              "length_ok": true,
+              "knows_limitation": null,
+              "quality": "poor"
+            },
+            "context_needed": [
+              "turn_1",
+              "turn_2"
+            ],
+            "must_remember": "Card was declined, user wants to help retry"
+          }
+        ],
+        "overall_pass": false,
+        "category": "errors",
+        "difficulty": "hard"
+      },
+      {
+        "conversation_id": "multiturn_004",
+        "conversation_name": "Subscription Setup Guidance",
+        "turns": [
+          {
+            "turn": 1,
+            "question": "How do I set up recurring billing?",
+            "rag_answer": "To set up recurring billing with Stripe, you need to create a subscription for your customers. Here’s how you can do it based on the documentation:\n\n1. **Create the Subscription**: You can create a new subscription either in the Dashboard or via the API. This action triggers an event that you should listen for using webhook endpoints to handle it properly.\n\n2. **Payment Behavior**: It's recommended to set the `payment_behavior` of the subscription to `default_incomplete`. This allows you to handle failed payments and complex payment flows. If you set it to `allow_incomplete`, Stripe will attempt to collect payment immediately, and if it fails, the subscription status will change to `incomplete`.\n\n3. **Handle the Invoice**: When you create a subscription, Stripe automatically generates an invoice with the status `open`. Your customer has about 23 hours to make a successful payment. If they pay, the subscription status updates to `active`. If they do not pay, the subscription will change to `incomplete_expired` and the invoice will become void.\n\n4. **Provision Access**: Once the subscription is active, you can provision access to your product based on the active entitlements created for the customer.\n\n5. **Update the Subscription**: You can modify existing subscriptions as needed without canceling and recreating them.\n\nFor more details, refer to the sections on \"Create the subscription,\" \"Payment behavior,\" \"Handle the invoice,\" and \"Provision access to your product\" in the documentation.",
+            "expected_answer": "Use Stripe Subscriptions: 1) Create Product, 2) Create Price with recurring interval, 3) Create Customer, 4) Create Subscription linking customer to price.",
+            "retrieval_metrics": {
+              "precision_at_k": 0.6666666666666666,
+              "recall_at_k": 1.0,
+              "mrr": 1.0,
+              "top_similarity": 0.5120835122312724,
+              "meets_threshold": false,
+              "should_not_retrieve_pass": null,
+              "required_doc_found": true,
+              "relevant_retrieved": [
+                "overview",
+                "creating"
+              ],
+              "retrieved_ids": [
+                "overview",
+                "creating",
+                "checkout"
+              ]
+            },
+            "answer_metrics": {
+              "semantic_similarity": 0.6958271029481796,
+              "length": 1511,
+              "length_ok": true,
+              "knows_limitation": null,
+              "quality": "acceptable"
+            },
+            "context_needed": [],
+            "must_remember": ""
+          },
+          {
+            "turn": 2,
+            "question": "What's a Price?",
+            "rag_answer": "I don't have information about that in the Stripe documentation.",
+            "expected_answer": "A Price defines amount, currency, and billing interval for a Product. You can have multiple Prices for same Product (e.g., $10/month or $100/year).",
+            "retrieval_metrics": {
+              "precision_at_k": 0.0,
+              "recall_at_k": 0.0,
+              "mrr": 0.0,
+              "top_similarity": 0.25222414765056234,
+              "meets_threshold": false,
+              "should_not_retrieve_pass": null,
+              "required_doc_found": false,
+              "relevant_retrieved": [],
+              "retrieved_ids": [
+                "payment-intents",
+                "keys",
+                "checkout"
+              ]
+            },
+            "answer_metrics": {
+              "semantic_similarity": 0.17710889157062096,
+              "length": 64,
+              "length_ok": true,
+              "knows_limitation": null,
+              "quality": "poor"
+            },
+            "context_needed": [
+              "turn_1"
+            ],
+            "must_remember": "User learning about subscriptions"
+          },
+          {
+            "turn": 3,
+            "question": "Do I need to set this up for each customer?",
+            "rag_answer": "I don't have information about that in the Stripe documentation.",
+            "expected_answer": "No, create Product and Price once, reuse for all customers. Only create one Customer object per customer and one Subscription per customer-price combination.",
+            "retrieval_metrics": {
+              "precision_at_k": 0.6666666666666666,
+              "recall_at_k": 1.0,
+              "mrr": 1.0,
+              "top_similarity": 0.3097768616301736,
+              "meets_threshold": false,
+              "should_not_retrieve_pass": null,
+              "required_doc_found": true,
+              "relevant_retrieved": [
+                "overview",
+                "creating"
+              ],
+              "retrieved_ids": [
+                "overview",
+                "creating",
+                "checkout"
+              ]
+            },
+            "answer_metrics": {
+              "semantic_similarity": 0.1787442768012944,
+              "length": 64,
+              "length_ok": true,
+              "knows_limitation": null,
+              "quality": "poor"
+            },
+            "context_needed": [
+              "turn_1",
+              "turn_2"
+            ],
+            "must_remember": "User asking about Product/Price setup"
+          }
+        ],
+        "overall_pass": false,
+        "category": "subscriptions",
+        "difficulty": "medium"
+      },
+      {
+        "conversation_id": "multiturn_005",
+        "conversation_name": "Vague to Specific Progression",
+        "turns": [
+          {
+            "turn": 1,
+            "question": "Something's wrong with payments",
+            "rag_answer": "I don't have information about that in the Stripe documentation.",
+            "expected_answer": "I need more information: 1) What error? 2) Test or live mode? 3) Payment flow (Checkout, Payment Intents)? 4) Payment intent/charge ID?",
+            "retrieval_metrics": {
+              "precision_at_k": 0.3333333333333333,
+              "recall_at_k": 0.5,
+              "mrr": 0.3333333333333333,
+              "top_similarity": 0.4113574481664251,
+              "meets_threshold": false,
+              "should_not_retrieve_pass": null,
+              "required_doc_found": false,
+              "relevant_retrieved": [
+                "payment-intents"
+              ],
+              "retrieved_ids": [
+                "testing",
+                "accept-a-payment",
+                "payment-intents"
+              ]
+            },
+            "answer_metrics": {
+              "semantic_similarity": 0.407526192090284,
+              "length": 64,
+              "length_ok": true,
+              "knows_limitation": null,
+              "quality": "poor"
+            },
+            "context_needed": [],
+            "must_remember": ""
+          },
+          {
+            "turn": 2,
+            "question": "Test mode, getting 'authentication required'",
+            "rag_answer": "If you are getting an 'authentication required' error in test mode, it may be due to not including a valid API key in your request. According to the \"API keys\" documentation, Stripe authenticates your API requests using your account’s API keys, and if a request doesn’t include a valid key, Stripe returns an invalid request error. Ensure that you are using the correct test API keys when making requests in test mode. You can find your test API keys in the Dashboard under the API Keys tab.",
+            "expected_answer": "This means 3D Secure authentication required. In test mode, use test cards like 4000002500003155 that support authentication. Stripe shows test authentication dialog.",
+            "retrieval_metrics": {
+              "precision_at_k": 0.3333333333333333,
+              "recall_at_k": 0.5,
+              "mrr": 0.5,
+              "top_similarity": 0.3910254088565824,
+              "meets_threshold": false,
+              "should_not_retrieve_pass": null,
+              "required_doc_found": true,
+              "relevant_retrieved": [
+                "testing"
+              ],
+              "retrieved_ids": [
+                "keys",
+                "testing",
+                "accept-a-payment"
+              ]
+            },
+            "answer_metrics": {
+              "semantic_similarity": 0.6561020002281511,
+              "length": 491,
+              "length_ok": true,
+              "knows_limitation": null,
+              "quality": "acceptable"
+            },
+            "context_needed": [
+              "turn_1"
+            ],
+            "must_remember": "User has payment issue in test mode"
+          },
+          {
+            "turn": 3,
+            "question": "How do I complete the authentication?",
+            "rag_answer": "To complete the authentication using the Payment Intents API, you should use the client secret associated with the PaymentIntent. The client secret is passed to the client side, and then you can invoke functions such as `stripe.confirmCardPayment` or `stripe.handleCardAction` to complete the payment process. \n\nThis information is found in the section titled \"Passing the client secret to the client side\" and \"After the payment\" in the Payment Intents API documentation. It emphasizes the importance of securely handling the client secret and monitoring webhooks to detect payment completion or failure.",
+            "expected_answer": "Click 'Authenticate' in test dialog, then 'Complete' to succeed. This simulates real 3D Secure flows.",
+            "retrieval_metrics": {
+              "precision_at_k": 0.0,
+              "recall_at_k": 0.0,
+              "mrr": 0.0,
+              "top_similarity": 0.3111888158427819,
+              "meets_threshold": false,
+              "should_not_retrieve_pass": null,
+              "required_doc_found": false,
+              "relevant_retrieved": [],
+              "retrieved_ids": [
+                "accept-a-payment",
+                "payment-intents",
+                "keys"
+              ]
+            },
+            "answer_metrics": {
+              "semantic_similarity": 0.4172261123373111,
+              "length": 605,
+              "length_ok": true,
+              "knows_limitation": null,
+              "quality": "poor"
+            },
+            "context_needed": [
+              "turn_1",
+              "turn_2"
+            ],
+            "must_remember": "User needs authentication in test mode"
+          }
+        ],
+        "overall_pass": false,
+        "category": "testing",
+        "difficulty": "hard"
+      }
+    ],
+    "timestamp": "2025-11-21T06:45:52"
+  },
+  "aggregates": {
+    "overall": {
+      "single_turn_pass_rate": 0.16666666666666666,
+      "single_turn_passed": 5,
+      "single_turn_total": 30,
+      "multiturn_pass_rate": 0.0,
+      "multiturn_passed": 0,
+      "multiturn_total": 5
+    },
+    "by_difficulty": {
+      "easy": {
+        "total": 8,
+        "passed": 3,
+        "pass_rate": 0.375
+      },
+      "medium": {
+        "total": 6,
+        "passed": 0,
+        "pass_rate": 0.0
+      },
+      "hard": {
+        "total": 16,
+        "passed": 2,
+        "pass_rate": 0.125
+      }
+    },
+    "by_category": {
+      "payments": {
+        "total": 3,
+        "passed": 1,
+        "pass_rate": 0.3333333333333333
+      },
+      "refunds": {
+        "total": 8,
+        "passed": 1,
+        "pass_rate": 0.125
+      },
+      "webhooks": {
+        "total": 6,
+        "passed": 0,
+        "pass_rate": 0.0
+      },
+      "testing": {
+        "total": 3,
+        "passed": 0,
+        "pass_rate": 0.0
+      },
+      "authentication": {
+        "total": 2,
+        "passed": 0,
+        "pass_rate": 0.0
+      },
+      "checkout": {
+        "total": 1,
+        "passed": 1,
+        "pass_rate": 1.0
+      },
+      "subscriptions": {
+        "total": 4,
+        "passed": 0,
+        "pass_rate": 0.0
+      },
+      "disputes": {
+        "total": 2,
+        "passed": 0,
+        "pass_rate": 0.0
+      },
+      "errors": {
+        "total": 3,
+        "passed": 0,
+        "pass_rate": 0.0
+      },
+      "out_of_scope": {
+        "total": 3,
+        "passed": 2,
+        "pass_rate": 0.6666666666666666
+      }
+    },
+    "by_failure_mode": {
+      "none": {
+        "total": 8,
+        "passed": 3,
+        "pass_rate": 0.375
+      },
+      "multi_doc_needed": {
+        "total": 5,
+        "passed": 0,
+        "pass_rate": 0.0
+      },
+      "comparison_needed": {
+        "total": 1,
+        "passed": 0,
+        "pass_rate": 0.0
+      },
+      "vague_query": {
+        "total": 1,
+        "passed": 0,
+        "pass_rate": 0.0
+      },
+      "typos": {
+        "total": 1,
+        "passed": 0,
+        "pass_rate": 0.0
+      },
+      "no_punctuation": {
+        "total": 1,
+        "passed": 0,
+        "pass_rate": 0.0
+      },
+      "typos_incomplete": {
+        "total": 1,
+        "passed": 0,
+        "pass_rate": 0.0
+      },
+      "multi_part_question": {
+        "total": 1,
+        "passed": 0,
+        "pass_rate": 0.0
+      },
+      "all_caps_urgent": {
+        "total": 1,
+        "passed": 0,
+        "pass_rate": 0.0
+      },
+      "maximally_vague": {
+        "total": 1,
+        "passed": 0,
+        "pass_rate": 0.0
+      },
+      "typos_complex": {
+        "total": 1,
+        "passed": 0,
+        "pass_rate": 0.0
+      },
+      "edge_case": {
+        "total": 5,
+        "passed": 0,
+        "pass_rate": 0.0
+      },
+      "info_not_in_docs": {
+        "total": 3,
+        "passed": 2,
+        "pass_rate": 0.6666666666666666
+      }
+    },
+    "retrieval_metrics": {
+      "avg_precision": 0.31111111111111106,
+      "avg_recall": 0.788888888888889,
+      "avg_mrr": 0.6277777777777778,
+      "avg_top_similarity": 0.48613082566026206
+    },
+    "answer_metrics": {
+      "avg_semantic_similarity": 0.598755023257354,
+      "avg_answer_length": 460.3
+    },
+    "failure_analysis": {
+      "retrieval_failures_count": 24,
+      "answer_failures_count": 11,
+      "retrieval_failure_ids": [
+        "basic_003",
+        "basic_004",
+        "basic_005",
+        "basic_007",
+        "basic_008",
+        "multihop_001",
+        "multihop_002",
+        "multihop_003",
+        "multihop_004",
+        "multihop_005",
+        "multihop_006",
+        "adversarial_001",
+        "adversarial_002",
+        "adversarial_003",
+        "adversarial_004",
+        "adversarial_005",
+        "adversarial_006",
+        "adversarial_007",
+        "adversarial_008",
+        "edge_001",
+        "edge_002",
+        "edge_003",
+        "edge_004",
+        "edge_005"
+      ],
+      "answer_failure_ids": [
+        "multihop_002",
+        "multihop_006",
+        "adversarial_002",
+        "adversarial_003",
+        "adversarial_005",
+        "adversarial_006",
+        "adversarial_007",
+        "edge_002",
+        "edge_004",
+        "edge_005",
+        "trick_002"
+      ]
+    }
+  },
+  "timestamp": "20251121_121552"
+}
